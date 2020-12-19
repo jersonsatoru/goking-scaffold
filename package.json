@@ -4,7 +4,6 @@
   "description": "API Node.js Rest Apis with Express, Sequelize & MySQL",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "pm2 start index.js",
     "start:dev": "NODE_ENV=development nodemon -r dotenv/config index.js",
     "start:prod": "NODE_ENV=production node -r dotenv/config index.js"
@@ -42,6 +41,7 @@
     "eslint": "^7.13.0",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "jest": "^26.6.3",
     "nodemon": "^2.0.6",
     "prettier": "^2.2.0"
   }
