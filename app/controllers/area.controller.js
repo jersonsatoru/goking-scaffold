@@ -13,7 +13,7 @@ exports.findAll = (req, res) => {
                 },
             }).status(200)
         })
-        .catch((err) => {
+        .catch((_) => {
             res.send({
                 status: false,
                 message: 'The request has not succeeded',
@@ -33,7 +33,7 @@ exports.findOne = (req, res) => {
                 area: data,
             },
         }).status(200)
-    }).catch(err => {
+    }).catch(_ => {
         res.send({
             status: false,
             message: 'The request has not succeeded',
@@ -136,7 +136,7 @@ exports.delete = (req, res) => {
         where: {
             uuid: uuid
         }
-    }).then(data => {
+    }).then(_ => {
         return res.status(200).send({
             status: false,
             message: 'Registro excluído com sucesso.',

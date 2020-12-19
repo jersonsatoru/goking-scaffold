@@ -5,7 +5,6 @@ const controller = require('../../../controllers/v2/versionApp.controller.js')
 const router = Router()
 
 module.exports = (app) => {
-
   router.get('/:uuid', controller.findOne)
 
   router.put('/:uuid', controller.update)
