@@ -82,23 +82,23 @@ exports.create = async (req, res) => {
     if (!userId) {
       return res.status(404).send({
         status: true,
-        message: 'The request has succeeded', 
-        message_error: 'Dependente não encontrado.'
-      });
+        message: 'The request has succeeded',
+        message_error: 'Dependente não encontrado.',
+      })
     }
   }
 
-// return res.json(userId);
+  // return res.json(userId);
   const medicalRecordExists = await MedicalRecord.count({
-    where: { user_id: userId ? userId.id : req.userId }
-  });
+    where: { user_id: userId ? userId.id : req.userId },
+  })
 
   if (medicalRecordExists) {
     return res.status(200).send({
       status: true,
       message: 'The request has succeeded',
-      message_error: 'Ficha médica já cadastrada.'
-    });
+      message_error: 'Ficha médica já cadastrada.',
+    })
   }
 
   // variables params

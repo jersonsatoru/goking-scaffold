@@ -47,7 +47,6 @@ module.exports = {
     // datetime
     var timestamp = new Date().getTime()
     //create uuid version 4
-    var uuid_user = uuidv4()
     var uuid_token = uuidv4()
 
     // User token exists
@@ -70,7 +69,7 @@ module.exports = {
             .then((data) => {
               return data
             })
-            .catch((err) => {
+            .catch(() => {
               return 'The request has not succeeded'
               // console.log(err)
             })
@@ -88,12 +87,12 @@ module.exports = {
           .then((data) => {
             return data
           })
-          .catch((err) => {
+          .catch(() => {
             return 'The request has not succeeded'
             // console.log(err)
           })
       })
-      .catch((err) => {
+      .catch(() => {
         return 'The request has not succeeded'
       })
   },
@@ -116,7 +115,7 @@ module.exports = {
       .then((data) => {
         return data
       })
-      .catch((err) => {
+      .catch(() => {
         return 'The request has not succeeded'
       })
   },
@@ -133,7 +132,7 @@ module.exports = {
       .then((data) => {
         return data
       })
-      .catch((err) => {
+      .catch(() => {
         return 'The request has not succeeded'
       })
   },
@@ -193,7 +192,7 @@ module.exports = {
       where: { national_registration: fields.national_registration },
     })
 
-    return results.map(async (item, index) => {
+    return results.map(async (item) => {
       const user = await User.create({
         uuid: uuidv4(),
         created_at: new Date().getTime(),

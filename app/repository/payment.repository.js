@@ -2,9 +2,7 @@ const db = require('../models')
 
 const User = db.users
 const Transaction = db.transaction
-const PersonalData = db.personalData
 const Payment = db.payment
-const Product = db.products
 
 module.exports = {
   select: (fields) => {

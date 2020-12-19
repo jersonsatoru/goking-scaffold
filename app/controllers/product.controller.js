@@ -47,7 +47,7 @@ exports.findAll = (req, res) => {
         },
       })
     })
-    .catch((err) => {
+    .catch(() => {
       res.status(500).send({
         status: false,
         message: 'The request has not succeeded',

@@ -71,16 +71,30 @@ exports.findAll = async (req, res) => {
         name: selectUser ? selectUser.dataValues.name : '',
         email: selectUserUUID ? selectUserUUID.dataValues.email : '',
         img: selectUser ? selectUser.dataValues.img : '',
-        profile: selectUserPersonal ? selectUserPersonal.dataValues.profile : '',
-        birthDay: selectUserPersonal ? selectUserPersonal.dataValues.birth_day : '',
+        profile: selectUserPersonal
+          ? selectUserPersonal.dataValues.profile
+          : '',
+        birthDay: selectUserPersonal
+          ? selectUserPersonal.dataValues.birth_day
+          : '',
         gender: selectUserPersonal ? selectUserPersonal.dataValues.gender : '',
-        cellphone: selectUserPersonal ? selectUserPersonal.dataValues.cellphone : '',
-        document: selectUserPersonal ? selectUserPersonal.dataValues.document : '',
+        cellphone: selectUserPersonal
+          ? selectUserPersonal.dataValues.cellphone
+          : '',
+        document: selectUserPersonal
+          ? selectUserPersonal.dataValues.document
+          : '',
         weight: selectMedicalRecord ? selectMedicalRecord.dataValues.weight : 0,
         height: selectMedicalRecord ? selectMedicalRecord.dataValues.height : 0,
-        healthProblems: selectMedicalRecord ? selectMedicalRecord.dataValues.health_problems : [],
-        continuousRemedy: selectMedicalRecord ? selectMedicalRecord.dataValues.continuous_remedy : '',
-        medicalAllergyDescription: selectMedicalRecord ? selectMedicalRecord.dataValues.medical_allergy_description : '',
+        healthProblems: selectMedicalRecord
+          ? selectMedicalRecord.dataValues.health_problems
+          : [],
+        continuousRemedy: selectMedicalRecord
+          ? selectMedicalRecord.dataValues.continuous_remedy
+          : '',
+        medicalAllergyDescription: selectMedicalRecord
+          ? selectMedicalRecord.dataValues.medical_allergy_description
+          : '',
       },
       doctor: {
         uuid: selectDoctor.dataValues.user_uuid_doctor || '',
@@ -284,7 +298,7 @@ exports.schedulingCreate = async (req, res) => {
     where: { id: idUser },
   })
 
-  const dateScheduling = moment.utc(req.body.scheduling_date).format();
+  const dateScheduling = moment.utc(req.body.scheduling_date).format()
 
   const scheduleData = {
     date: moment(dateScheduling).format('DD/MM/YYYY'),
@@ -334,8 +348,10 @@ exports.schedulingCreate = async (req, res) => {
         findDoctorProfile.dataValues.cellphone !== '-'
       ) {
         sendSms(
-          `Ola ${String(doctorExists.dataValues.name).split(' ')[0]
-          }, uma nova consulta foi agendada para o dia ${scheduleData.date
+          `Ola ${
+            String(doctorExists.dataValues.name).split(' ')[0]
+          }, uma nova consulta foi agendada para o dia ${
+            scheduleData.date
           } as ${scheduleData.time}`,
           'StarBem',
           `55${findDoctorProfile.dataValues.cellphone}`
@@ -343,8 +359,10 @@ exports.schedulingCreate = async (req, res) => {
       }
 
       sendSms(
-        `Ola ${String(patientDataFind.dataValues.name).split(' ')[0]
-        }, sua consulta foi agendada com sucesso para o dia ${scheduleData.date
+        `Ola ${
+          String(patientDataFind.dataValues.name).split(' ')[0]
+        }, sua consulta foi agendada com sucesso para o dia ${
+          scheduleData.date
         } as ${scheduleData.time}`,
         'StarBem',
         `55${req.body.cellphone}`
@@ -482,7 +500,7 @@ exports.process = async (req, res) => {
   }
   // completed status
   if (req.body.status == 2) {
-    var data = Scheduling.update(
+    data = Scheduling.update(
       {
         end_service: timestamp,
         updated_id: req.userId,
@@ -499,7 +517,7 @@ exports.process = async (req, res) => {
     var cancel_service_description = req.body.cancel_service_description
       ? req.body.cancel_service_description
       : null
-    var data = Scheduling.update(
+    data = Scheduling.update(
       {
         cancel_service: timestamp,
         updated_id: req.userId,
@@ -597,7 +615,7 @@ exports.schedulingVerify = async (req, res) => {
   //get id product
   const product = await repositoryScheduling.existsProduct(payment.product_id)
   if (!product) {
-    return sendError(res, productExists, 'Plano não existente', null)
+    return sendError(res, 'Plano não existente', null)
   }
 
   //return true
@@ -656,7 +674,7 @@ exports.schedulingVerifyCheckTime = async (req, res) => {
   //get id product
   const product = await repositoryScheduling.existsProduct(payment.product_id)
   if (!product) {
-    return sendError(res, productExists, 'Plano não existente', null)
+    return sendError(res, 'Plano não existente', null)
   }
 
   // var period = validatePeriodAll(req.body.scheduling_date);
@@ -734,7 +752,7 @@ exports.schedulingVerifyCheckTime = async (req, res) => {
   let end_time = doctor_schedules.end_time[0] + doctor_schedules.end_time[1]
 
   // second interval
-  for (var hour = end_pause; hour < end_time; hour++) {
+  for (let hour = end_pause; hour < end_time; hour++) {
     if (hour.toString().length == 1) {
       hour = '0' + hour
     }
@@ -775,166 +793,6 @@ exports.schedulingVerifyCheckTime = async (req, res) => {
     free_time,
     weekday: weekday,
   })
-}
-
-//validation period
-function validatePeriodAll(date) {
-  var start = moment(date).format('08:00')
-  var end = moment(date).format('12:59')
-  var moning = [
-    '08:00',
-    '08:15',
-    '08:30',
-    '08:45',
-    '09:00',
-    '09:15',
-    '09:30',
-    '09:45',
-    '10:00',
-    '10:15',
-    '10:30',
-    '10:45',
-    '11:00',
-    '11:15',
-    '11:30',
-    '11:45',
-    '12:00',
-    '12:15',
-    '12:30',
-    '12:45',
-  ]
-  var evening = [
-    '13:00',
-    '13:15',
-    '13:30',
-    '13:45',
-    '14:00',
-    '14:15',
-    '14:30',
-    '14:45',
-    '15:00',
-    '15:15',
-    '15:30',
-    '15:45',
-    '16:00',
-    '16:15',
-    '16:30',
-    '16:45',
-    '17:00',
-    '17:15',
-    '17:30',
-    '17:45',
-  ]
-  var night = [
-    '18:00',
-    '18:15',
-    '18:30',
-    '18:45',
-    '19:00',
-    '19:15',
-    '19:30',
-    '19:45',
-    '20:00',
-    '20:15',
-    '20:30',
-    '20:45',
-    '21:00',
-    '21:15',
-    '21:30',
-    '21:45',
-  ]
-  var hour = moning.concat(evening, night)
-  //var hour = moning;
-  return [start, end, hour]
-}
-
-//validation period
-function validatePeriod(period, date) {
-  if (period == 1) {
-    var start = moment(date).format('08:00')
-    var end = moment(date).format('12:59')
-    var hour = [
-      '08:00',
-      '08:15',
-      '08:30',
-      '08:45',
-      '09:00',
-      '09:15',
-      '09:30',
-      '09:45',
-      '10:00',
-      '10:15',
-      '10:30',
-      '10:45',
-      '11:00',
-      '11:15',
-      '11:30',
-      '11:45',
-      '12:00',
-      '12:15',
-      '12:30',
-      '12:45',
-    ]
-    return [start, end, hour]
-  }
-  if (period == 2) {
-    var start = moment(date).format('13:00:00')
-    var end = moment(date).format('17:59:59')
-    var hour = [
-      '13:00',
-      '13:15',
-      '13:30',
-      '13:45',
-      '14:00',
-      '14:15',
-      '14:30',
-      '14:45',
-      '15:00',
-      '15:15',
-      '15:30',
-      '15:45',
-      '16:00',
-      '16:15',
-      '16:30',
-      '16:45',
-      '17:00',
-      '17:15',
-      '17:30',
-      '17:45',
-    ]
-    return [start, end, hour]
-  }
-  if (period == 3) {
-    var start = moment(date).format('18:00:00')
-    var end = moment(date).format('23:59:59')
-    var hour = [
-      '18:00',
-      '18:15',
-      '18:30',
-      '18:45',
-      '19:00',
-      '19:15',
-      '19:30',
-      '19:45',
-      '20:00',
-      '20:15',
-      '20:30',
-      '20:45',
-      '21:00',
-      '21:15',
-      '21:30',
-      '21:45',
-      '22:00',
-      '22:15',
-      '22:30',
-      '22:45',
-      '23:00',
-      '23:15',
-      '23:30',
-      '23:45',
-    ]
-    return [start, end, hour]
-  }
 }
 
 //sendo to error
