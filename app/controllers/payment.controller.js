@@ -91,18 +91,18 @@ exports.payment = async (req, res) => {
 
   // var sumTitularDepTransaction = sumDependents + parseFloat(productUuid.amount);
   // var productAmount = parseFloat(productUuid.amount);
-
+  let countTotal, countTotalDecimal
   if (req.body.dependents.length > 0 && productUuid.payment_methods == 1) {
     // amount subscription
-    var countTotal = parseFloat(sumDependents)
-    var countTotalDecimal = parseFloat(sumDependents)
+    countTotal = parseFloat(sumDependents)
+    countTotalDecimal = parseFloat(sumDependents)
   } else {
     //sum amount dependent, titular
-    var countTotal =
+    countTotal =
       req.body.dependents.length > 0
         ? sumDependents + parseFloat(productUuid.amount)
         : parseFloat(productUuid.amount)
-    var countTotalDecimal =
+    countTotalDecimal =
       req.body.dependents.length > 0
         ? sumDependents + parseFloat(productUuid.amount)
         : parseFloat(productUuid.amount)
@@ -219,7 +219,7 @@ exports.payment = async (req, res) => {
     }
 
     // repository payment
-    const insertPayment = await repositoryPayment.insertPayment(paramsPayment)
+    await repositoryPayment.insertPayment(paramsPayment)
 
     let dataIDUser = []
     //loop to dependent
@@ -326,7 +326,7 @@ exports.payment = async (req, res) => {
           {
             where: { id: insertTransaction.id },
           }
-        ).catch((err) => {
+        ).catch(() => {
           res.status(500).send({
             status: false,
             message: 'The request has not succeeded',
@@ -346,7 +346,7 @@ exports.payment = async (req, res) => {
           {
             where: { transaction_id: insertTransaction.id },
           }
-        ).catch((err) => {
+        ).catch(() => {
           res.status(500).send({
             status: false,
             message: 'The request has not succeeded',
@@ -383,7 +383,7 @@ exports.payment = async (req, res) => {
                 },
               })
             })
-            .catch((err) => {
+            .catch(() => {
               res.status(500).send({
                 status: false,
                 message: 'The request has not succeeded',
@@ -459,12 +459,12 @@ exports.payment = async (req, res) => {
     }
 
     // repository payment
-    const insertPayment = await repositoryPayment.insertPayment(paramsPayment)
+    await repositoryPayment.insertPayment(paramsPayment)
 
     let dataIDUser = []
     //loop to dependent
-    for (var i = 0; i < req.body.dependents.length; i++) {
-      var dep = req.body.dependents[i]
+    for (let i = 0; i < req.body.dependents.length; i++) {
+      dep = req.body.dependents[i]
 
       //create user dependent
       const insertUser = await User.create({
@@ -565,7 +565,7 @@ exports.payment = async (req, res) => {
           {
             where: { id: insertTransaction.id },
           }
-        ).catch((err) => {
+        ).catch(() => {
           res.status(500).send({
             status: false,
             message: 'The request has not succeeded',
@@ -585,7 +585,7 @@ exports.payment = async (req, res) => {
           {
             where: { transaction_id: insertTransaction.id },
           }
-        ).catch((err) => {
+        ).catch(() => {
           res.status(500).send({
             status: false,
             message: 'The request has not succeeded',
@@ -632,7 +632,7 @@ exports.payment = async (req, res) => {
                 },
               })
             })
-            .catch((err) => {
+            .catch(() => {
               res.status(500).send({
                 status: false,
                 message: 'The request has not succeeded',

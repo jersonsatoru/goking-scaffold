@@ -16,7 +16,7 @@ const MedicalRecord = db.medicalRecord
 const MedicalRecordQuestion = db.medicalRecordQuestion
 const Product = db.products
 const Schenduling = db.scheduling
-const Area = db.area;
+const Area = db.area
 const AreaUser = db.areaUser
 
 const sequelize = db.sequelize
@@ -24,43 +24,43 @@ const { QueryTypes } = require('sequelize')
 
 // Retrieve all from the database.
 exports.findAllDoctor = async (req, res) => {
-  const weekday = moment.utc(req.body.scheduling_date).format('YYYY-MM-DD');
+  const weekday = moment.utc(req.body.scheduling_date).format('YYYY-MM-DD')
 
-  const area = await Area.findOne({ where: { uuid: req.body.area_uuid } });
+  const area = await Area.findOne({ where: { uuid: req.body.area_uuid } })
 
   if (!area) {
     return res.status(404).send({
       status: false,
       message: 'The request has not succeeded',
       message_error: 'Área não encontrada.',
-    });
+    })
   }
 
   // Get
   sequelize
     .query(
       'SELECT ' +
-      'user.id,' +
-      'user.created_at,' +
-      'user.created_id,' +
-      'user.uuid,' +
-      'user.name,' +
-      'user.document,' +
-      'user.email,' +
-      'user.img,' +
-      'user.status,' +
-      'doctorSchedules.status_description, ' +
-      'doctorSchedules.day as weekday ' +
-      'FROM users AS user ' +
-      'left JOIN doctor_schedule AS doctorSchedules ON user.id = doctorSchedules.user_id AND doctorSchedules.status = 1 ' +
-      ' WHERE user.type = :type AND user.status = :status AND day = :day AND doctorSchedules.area_id = :area_id' +
-      ' GROUP BY user.id, user.created_at, user.created_id, user.uuid, user.name, user.document, user.email, user.img, user.status, doctorSchedules.status_description, doctorSchedules.day',
+        'user.id,' +
+        'user.created_at,' +
+        'user.created_id,' +
+        'user.uuid,' +
+        'user.name,' +
+        'user.document,' +
+        'user.email,' +
+        'user.img,' +
+        'user.status,' +
+        'doctorSchedules.status_description, ' +
+        'doctorSchedules.day as weekday ' +
+        'FROM users AS user ' +
+        'left JOIN doctor_schedule AS doctorSchedules ON user.id = doctorSchedules.user_id AND doctorSchedules.status = 1 ' +
+        ' WHERE user.type = :type AND user.status = :status AND day = :day AND doctorSchedules.area_id = :area_id' +
+        ' GROUP BY user.id, user.created_at, user.created_id, user.uuid, user.name, user.document, user.email, user.img, user.status, doctorSchedules.status_description, doctorSchedules.day',
       {
         replacements: {
           type: '2',
           status: '1',
           day: weekday,
-          area_id: area.id
+          area_id: area.id,
         },
         type: QueryTypes.SELECT,
       }
@@ -75,7 +75,7 @@ exports.findAllDoctor = async (req, res) => {
         },
       })
     })
-    .catch((err) => {
+    .catch(() => {
       // return json
       return res.status(500).send({
         status: false,
@@ -98,7 +98,7 @@ exports.findAll = async (req, res) => {
       'professional_document_type',
       'professional_document_uf',
       'professional_document_number',
-      'specialty'
+      'specialty',
     ],
     where: { user_id: userId },
   })
@@ -120,7 +120,7 @@ exports.findAll = async (req, res) => {
     ],
     where: { user_id: userId },
   })
-    ; ('')
+  ;('')
   // //get payment uuid to user_id
   const payment = await Payment.findOne({
     where: { user_id: userId },
@@ -141,16 +141,16 @@ exports.findAll = async (req, res) => {
     where: { id: product_id },
   })
 
-  const area_user = await AreaUser.findAll({ where: { user_id: userId } });
-  let area_occupation = [];
+  const area_user = await AreaUser.findAll({ where: { user_id: userId } })
+  let area_occupation = []
   for (let index = 0; index < area_user.length; index++) {
     area_occupation[index] = await Area.findOne({
       attributes: ['uuid', 'name'],
       where: {
-        id: area_user[index].area_id
-      }
-    });
-  };
+        id: area_user[index].area_id,
+      },
+    })
+  }
 
   let plan = {
     title: product ? product.title : null,
@@ -192,7 +192,7 @@ exports.findAll = async (req, res) => {
         })
         .status(200)
     })
-    .catch((err) => {
+    .catch(() => {
       //return json
       res
         .send({
@@ -248,65 +248,70 @@ exports.editUser = async (req, res) => {
       : null,
     updated_at: new Date().getTime(),
     updated_id: req.userId,
-    specialty: req.body.specialty ? req.body.specialty : null
+    specialty: req.body.specialty ? req.body.specialty : null,
   }
   // get area occupation
-  let area = req.body.area ? req.body.area : 0;
+  let area = req.body.area ? req.body.area : 0
 
   // create or update area de occupation
   for (let i = 0; i < area.length; i++) {
-
-    const area_id = await Area.findOne({ where: { uuid: area[i].uuid } });
+    const area_id = await Area.findOne({ where: { uuid: area[i].uuid } })
 
     if (!area_id) {
       return res.status(404).send({
         status: false,
         message: 'The request has not succeeded',
         message_error: 'Área não encontrada.',
-      });
+      })
     }
 
     const validate = await AreaUser.count({
-      where:
-      {
+      where: {
         area_id: area_id.id,
-        user_id: req.userId
-      }
-    });
+        user_id: req.userId,
+      },
+    })
 
     if (validate == 0) {
-      AreaUser.create({ uuid: uuidv4(), area_id: area_id.id, user_id: req.userId });
+      AreaUser.create({
+        uuid: uuidv4(),
+        area_id: area_id.id,
+        user_id: req.userId,
+      })
     }
 
     if (validate > 0 && area[i].type == 0) {
       AreaUser.destroy({
         where: {
           user_id: req.userId,
-          area_id: area_id.id
-        }
+          area_id: area_id.id,
+        },
       })
     }
 
     if (validate > 0 && area[i].type == 1) {
-      AreaUser.update({
-        area_id: area_id.id,
-        user_id: req.userId,
-        updated_at: new Date().getTime(),
-        updated_id: req.userId,
-      }, {
-        where: {
+      AreaUser.update(
+        {
+          area_id: area_id.id,
           user_id: req.userId,
-          area_id: area_id.id
+          updated_at: new Date().getTime(),
+          updated_id: req.userId,
+        },
+        {
+          where: {
+            user_id: req.userId,
+            area_id: area_id.id,
+          },
         }
-      });
+      )
     }
-  };
+  }
 
   //edit user
   User.update(paramsUser, {
     where: { id: user_id },
   })
-    .then((data) => {
+    .then(() => {
       //edit personal data
       PersonalData.update(paramsPersonalData, {
         where: { user_id: user_id },
@@ -834,8 +839,8 @@ exports.userData = async (req, res) => {
     // Deprecated
     const created_name = medicalRecordQuestionDatas.created_id
       ? await repositoryUser.selectNameDoctor(
-        medicalRecordQuestionDatas.created_id
-      )
+          medicalRecordQuestionDatas.created_id
+        )
       : null
 
     const dataValues = {
@@ -871,7 +876,7 @@ function checkCPF(strCPF) {
   Soma = 0
   if (strCPF == '00000000000' || strCPF == '11111111111') return false
 
-  for (i = 1; i <= 9; i++)
+  for (let i = 1; i <= 9; i++)
     Soma = Soma + parseInt(strCPF.substring(i - 1, i)) * (11 - i)
   Resto = (Soma * 10) % 11
 
@@ -879,7 +884,7 @@ function checkCPF(strCPF) {
   if (Resto != parseInt(strCPF.substring(9, 10))) return false
 
   Soma = 0
-  for (i = 1; i <= 10; i++)
+  for (let i = 1; i <= 10; i++)
     Soma = Soma + parseInt(strCPF.substring(i - 1, i)) * (12 - i)
   Resto = (Soma * 10) % 11
 

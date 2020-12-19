@@ -1,10 +1,6 @@
-const db = require('../models')
-const { v4: uuidv4 } = require('uuid')
 const csv = require('csv-parser')
 const fs = require('fs')
 const repositoryUser = require('../repository/user.repository')
-const User = db.users
-const Companie = db.companie
 
 // import file CSV
 exports.importCSV = (req, res) => {

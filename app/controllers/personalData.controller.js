@@ -126,7 +126,7 @@ exports.show = async (req, res) => {
   User.hasOne(Model, { foreignKey: 'user_id' })
   Model.belongsTo(User, { foreignKey: 'id' })
 
-  const user = await User.findOne({
+  await User.findOne({
     attributes: [],
     where: { uuid: uuid_user },
     include: [
@@ -156,7 +156,7 @@ exports.show = async (req, res) => {
         data: data,
       })
     })
-    .catch((err) => {
+    .catch(() => {
       return res.status(500).send({
         status: false,
         message: 'The request has not succeeded',

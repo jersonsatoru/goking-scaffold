@@ -2,7 +2,6 @@ const db = require('../models')
 const { v4: uuidv4 } = require('uuid')
 const Companie = db.companie
 const Address = db.address
-const Op = db.Sequelize.Op
 
 // Retrieve all from the database.
 exports.findAll = (req, res) => {
@@ -124,7 +123,7 @@ exports.update = async (req, res) => {
   Companie.update(paramsCompanie, {
     where: { id: dataCompanie.id },
   })
-    .then((data) => {
+    .then(() => {
       Address.update(paramsAddressCompanie, {
         where: { companie_id: dataCompanie.id },
       })

@@ -13,7 +13,7 @@ exports.findAll = (req, res) => {
     .then((data) => {
       res
         .send({
-    status: true,
+          status: true,
           message: 'The request has succeeded',
           data: {
             address: data,

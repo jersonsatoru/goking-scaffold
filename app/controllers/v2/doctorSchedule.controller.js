@@ -9,18 +9,27 @@ const Area = db.area
 // Retrieve all from the database.
 exports.findAll = (req, res) => {
   //Association Area with DoctorSchedule
-  Area.hasOne(DoctorSchedule, { foreignKey: 'id' });
-  DoctorSchedule.belongsTo(Area, { foreignKey: 'area_id' });
+  Area.hasOne(DoctorSchedule, { foreignKey: 'id' })
+  DoctorSchedule.belongsTo(Area, { foreignKey: 'area_id' })
 
   DoctorSchedule.findAll({
-    attributes: ['uuid', 'created_at','day','start_time','end_time','updated_at','status','status_description'],
+    attributes: [
+      'uuid',
+      'created_at',
+      'day',
+      'start_time',
+      'end_time',
+      'updated_at',
+      'status',
+      'status_description',
+    ],
     where: { user_id: req.userId },
     include: [
       {
-        attributes: ['uuid','name'],
+        attributes: ['uuid', 'name'],
         model: Area,
-      }
-    ]
+      },
+    ],
   })
     .then((data) => {
       res
@@ -53,14 +62,16 @@ exports.create = async (req, res) => {
   // datetime
   const timestamp = new Date().getTime()
 
-  const specialty_uuid = await Area.findOne({ where: { uuid: req.body.area_uuid } });
+  const specialty_uuid = await Area.findOne({
+    where: { uuid: req.body.area_uuid },
+  })
   // validate area occupation
   if (!specialty_uuid) {
     return res.status(404).send({
       status: false,
       message: 'The request has not succeeded',
       message_error: 'Área não encontrada.',
-    });
+    })
   }
 
   // variables params
