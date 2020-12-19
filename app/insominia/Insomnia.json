@@ -1,0 +1,3651 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2020-10-29T03:17:38.191Z",
+  "__export_source": "insomnia.desktop.app:v2020.4.2",
+  "resources": [
+    {
+      "_id": "req_66135116c3ac408c9d0747bc6124e6bc",
+      "parentId": "fld_8ce8bad2e75f4577924d94f6087292b9",
+      "modified": 1603937357687,
+      "created": 1602076816798,
+      "url": "https://api.pagar.me/1/transactions",
+      "name": "transaction credit_card",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"api_key\": \"ak_test_QzLLTVUrBMIzDR9o7o9ovneClV96RJ\",\n\t\"payment_method\": \"credit_card\",\n\t\"amount\": \"21000\",\n\t\"card_number\": \"4111111111111111\",\n\t\"card_cvv\": \"123\",\n\t\"card_expiration_date\": \"0922\",\n\t\"card_holder_name\": \"Morpheus Fishburne\",\n\t\"installments\": 6,\n\t\"async\": false,\n\t\"soft_descriptor\": \"StarBem\",\n\t\"postback_url\": \"https://api.starbem.app/api/v1/postback_transaction\",\n\t\"customer\": {\n\t\t\"external_id\": \"#3311\",\n\t\t\"name\": \"Morpheus asdf\",\n\t\t\"type\": \"individual\",\n\t\t\"country\": \"br\",\n\t\t\"email\": \"mopheus@nabucodonozor.com\",\n\t\t\"documents\": [\n\t\t\t{\n\t\t\t\t\"type\": \"cpf\",\n\t\t\t\t\"number\": \"34100353898\"\n\t\t\t}\n\t\t],\n\t\t\"phone_numbers\": [\n\t\t\t\"+5511985409693\"\n\t\t],\n\t\t\"birthday\": \"1985-10-29\"\n\t},\n\t\"billing\": {\n\t\t\"name\": \"Trinity asdfas\",\n\t\t\"address\": {\n\t\t\t\"country\": \"br\",\n\t\t\t\"state\": \"sp\",\n\t\t\t\"city\": \"Cotia\",\n\t\t\t\"neighborhood\": \"Rio Cotia\",\n\t\t\t\"street\": \"Rua Matrix\",\n\t\t\t\"street_number\": \"9999\",\n\t\t\t\"zipcode\": \"06714360\"\n\t\t}\n\t},\n\t\"items\": [\n\t\t{\n\t\t\t\"id\": \"r4\",\n\t\t\t\"title\": \"Plano Semestral\",\n\t\t\t\"unit_price\": \"10104\",\n\t\t\t\"quantity\": 1,\n\t\t\t\"tangible\": false\n\t\t}\n\t]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4ef4286bd69644a4942fc99c8f9cd25c"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1600710772334.625,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_8ce8bad2e75f4577924d94f6087292b9",
+      "parentId": "fld_1e06c9a3566c4703b1e9a25906adf385",
+      "modified": 1602075988253,
+      "created": 1602075988253,
+      "name": "Transaction",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1602075988253,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_1e06c9a3566c4703b1e9a25906adf385",
+      "parentId": "wrk_5df8fa6817f1433a82f8bc84cc717f0a",
+      "modified": 1600967492840,
+      "created": 1600710666398,
+      "name": "Pagar Me",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600789893093,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_5df8fa6817f1433a82f8bc84cc717f0a",
+      "parentId": null,
+      "modified": 1600354651448,
+      "created": 1600354651448,
+      "name": "STARBEM",
+      "description": "",
+      "scope": null,
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_e9d5a960252b456d9187504e9d0c10d9",
+      "parentId": "fld_8ce8bad2e75f4577924d94f6087292b9",
+      "modified": 1603124905236,
+      "created": 1602909807222,
+      "url": "https://api.pagar.me/1/transactions/10076294",
+      "name": "payment billet",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"api_key\": \"ak_test_rga8le0ENKdBcHPns13xkhDIwE3eqx\",\n\t\"status\": \"paid\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4ef4286bd69644a4942fc99c8f9cd25c"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1600710772329.1562,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_15c6e3fa5a584ce1a9bdd6c3a2b6b594",
+      "parentId": "fld_8ce8bad2e75f4577924d94f6087292b9",
+      "modified": 1602902537859,
+      "created": 1602630166038,
+      "url": "https://api.pagar.me/1/transactions",
+      "name": "transaction billet",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"api_key\": \"ak_test_QzLLTVUrBMIzDR9o7o9ovneClV96RJ\",\n\t\"amount\": \"10104\",\n\t\"card_number\": \"4111111111111111\",\n\t\"card_cvv\": \"123\",\n\t\"card_expiration_date\": \"0922\",\n\t\"card_holder_name\": \"Morpheus Fishburne\",\n\t\"payment_method\": \"boleto\",\n\t\"installments\": 1,\n\t\"soft_descriptor\": \"StarBem\",\n\t\"async\": false,\n\t\"postback_url\": \"https://api.starbem.app/api/v1/postback_transaction\",\n\t\"customer\": {\n\t\t\"external_id\": \"#3311\",\n\t\t\"name\": \"Michael Plano Semestral\",\n\t\t\"type\": \"individual\",\n\t\t\"country\": \"br\",\n\t\t\"email\": \"mopheus@nabucodonozor.com\",\n\t\t\"documents\": [\n\t\t\t{\n\t\t\t\t\"type\": \"cpf\",\n\t\t\t\t\"number\": \"30621143049\"\n\t\t\t}\n\t\t],\n\t\t\"phone_numbers\": [\n\t\t\t\"+5511999998888\"\n\t\t],\n\t\t\"birthday\": \"1965-01-01\"\n\t},\n\t\"items\": [\n\t\t{\n\t\t\t\"id\": \"r123\",\n\t\t\t\"title\": \"Red pill\",\n\t\t\t\"unit_price\": 10000,\n\t\t\t\"quantity\": 1,\n\t\t\t\"tangible\": true\n\t\t}\n\t]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4ef4286bd69644a4942fc99c8f9cd25c"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1600710772323.6875,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_67a911ba2b2a486292df39383459ab5f",
+      "parentId": "fld_8ce8bad2e75f4577924d94f6087292b9",
+      "modified": 1603492260189,
+      "created": 1602631432800,
+      "url": "https://api.pagar.me/1/subscription/511180/capture",
+      "name": "transaction get id",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"api_key\": \"ak_test_QzLLTVUrBMIzDR9o7o9ovneClV96RJ\",\n\t\"amount\": \"10104\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4ef4286bd69644a4942fc99c8f9cd25c"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1600710772318.2188,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_108d8f19ffa84bc79cfd6d68c87a815c",
+      "parentId": "fld_118e3f133d6548f8be365246766190b6",
+      "modified": 1600719195597,
+      "created": 1600710772319,
+      "url": "https://api.pagar.me/1/customers",
+      "name": "customer create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"api_key\": \"ak_test_rga8le0ENKdBcHPns13xkhDIwE3eqx\",\n\t\"external_id\": \"#idinterno\",\n\t\"name\": \"Michael Regis\",\n\t\"type\": \"individual\",\n\t\"country\": \"br\",\n\t\"email\": \"michaelito.regis@gmail.com\",\n\t\"documents\": [\n\t\t{\n\t\t\t\"type\": \"cpf\",\n\t\t\t\"number\": \"34100353898\"\n\t\t}\n\t],\n\t\"phone_numbers\": [\n\t\t\"+5511985409693\"\n\t],\n\t\"birthday\": \"1985-10-29\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4ef4286bd69644a4942fc99c8f9cd25c"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1600710772356.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_118e3f133d6548f8be365246766190b6",
+      "parentId": "fld_1e06c9a3566c4703b1e9a25906adf385",
+      "modified": 1600718996568,
+      "created": 1600718996568,
+      "name": "Customer",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600718996568,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_ead2658b8c01415cb2fb744c1c5a2124",
+      "parentId": "fld_118e3f133d6548f8be365246766190b6",
+      "modified": 1600719238613,
+      "created": 1600717378744,
+      "url": "https://api.pagar.me/1/customers",
+      "name": "customer get",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"api_key\": \"ak_test_rga8le0ENKdBcHPns13xkhDIwE3eqx\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4ef4286bd69644a4942fc99c8f9cd25c"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1600710772306.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9dcf8c4c87874ea5acc0e090bbc1d33e",
+      "parentId": "fld_118e3f133d6548f8be365246766190b6",
+      "modified": 1600719252610,
+      "created": 1600719079834,
+      "url": "https://api.pagar.me/1/customers/3774966",
+      "name": "customer get id",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"api_key\": \"ak_test_rga8le0ENKdBcHPns13xkhDIwE3eqx\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4ef4286bd69644a4942fc99c8f9cd25c"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1600710772304.9375,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_08819b2662c74ddfaeeca6ebe72b4988",
+      "parentId": "fld_60bd2fb151c245de8cfa759d2355b4e4",
+      "modified": 1602645746730,
+      "created": 1602645261937,
+      "url": "https://api.pagar.me/1/transactions/10043694/postbacks",
+      "name": "postback url get id",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"api_key\": \"ak_test_rga8le0ENKdBcHPns13xkhDIwE3eqx\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4ef4286bd69644a4942fc99c8f9cd25c"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1600710772304.9375,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_60bd2fb151c245de8cfa759d2355b4e4",
+      "parentId": "fld_1e06c9a3566c4703b1e9a25906adf385",
+      "modified": 1602645261923,
+      "created": 1602645261923,
+      "name": "PostBack Url",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600718622684.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_b55fa292f27b45b8a4b5ebe2df99a63b",
+      "parentId": "fld_83b1fa337b3f4347bd790f92e8408286",
+      "modified": 1603913772347,
+      "created": 1600719107936,
+      "url": "https://api.pagar.me/1/plans",
+      "name": "plans create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"amount\": \"9000\",\n\t\"api_key\": \"ak_live_yCY18IJPv2zoUPTpnouWZdaioXbSvd\",\n\t\"days\": 30,\n\t\"name\": \"Plano Mensal +  Dependentes\",\n\t\"payment_methods\": \"credit_card\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4ef4286bd69644a4942fc99c8f9cd25c"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1600710772312.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_83b1fa337b3f4347bd790f92e8408286",
+      "parentId": "fld_1e06c9a3566c4703b1e9a25906adf385",
+      "modified": 1600718248801,
+      "created": 1600718248801,
+      "name": "Plans",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600718248801,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_1cdd7c0be5dd428badd2890ef02a4b9d",
+      "parentId": "fld_83b1fa337b3f4347bd790f92e8408286",
+      "modified": 1603912468717,
+      "created": 1600719047301,
+      "url": "https://api.pagar.me/1/plans",
+      "name": "plans get",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"api_key\": \"ak_live_yCY18IJPv2zoUPTpnouWZdaioXbSvd\",\n\t\"count\": \"20\",\n\t\"page\": \"1\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4ef4286bd69644a4942fc99c8f9cd25c"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1600710772303.375,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e8941c5c28da4dd985f080794a02ab64",
+      "parentId": "fld_83b1fa337b3f4347bd790f92e8408286",
+      "modified": 1603147638375,
+      "created": 1600718925644,
+      "url": "{{ online }}{{ apiPath }}users/verify_email{{ online }}{{ apiPath  }}users/dev_create_doctor",
+      "name": "plans get id",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"api_key\": \"ak_test_rga8le0ENKdBcHPns13xkhDIwE3eqx\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4ef4286bd69644a4942fc99c8f9cd25c"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1600710772300.25,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d4e24f032fa749699950ce28dd33e8ad",
+      "parentId": "fld_83b1fa337b3f4347bd790f92e8408286",
+      "modified": 1600718319069,
+      "created": 1600717928383,
+      "url": "https://api.pagar.me/1/plans/503782",
+      "name": "plans update",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"api_key\": \"ak_test_rga8le0ENKdBcHPns13xkhDIwE3eqx\",\n\t\"name\": \"Plano Basico Teste\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4ef4286bd69644a4942fc99c8f9cd25c"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1600710772294,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_3c9a894d148f4d3f89d5b497ef253eb0",
+      "parentId": "fld_83b1fa337b3f4347bd790f92e8408286",
+      "modified": 1603146291100,
+      "created": 1603146274071,
+      "url": "https://api.pagar.me/1/plans/511179",
+      "name": "plans delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"api_key\": \"ak_test_QzLLTVUrBMIzDR9o7o9ovneClV96RJ\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4ef4286bd69644a4942fc99c8f9cd25c"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1600532726643,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_c6080a755506424eb4fdb5d68b50a43a",
+      "parentId": "fld_5f26ef6b7a994ba5a7b14801f795dde6",
+      "modified": 1603935081176,
+      "created": 1600718206043,
+      "url": "https://api.pagar.me/1/subscriptions/",
+      "name": "subscription create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"api_key\": \"ak_test_QzLLTVUrBMIzDR9o7o9ovneClV96RJ\",\n\t\"card_number\": \"4111111111111111\",\n\t\"card_cvv\": \"123\",\n\t\"card_expiration_date\": \"0922\",\n\t\"card_holder_name\": \"Morpheus Fishburne\",\n\t\"payment_method\": \"credit_card\",\n\t\"postback_url\": \"https://api.starbem.app/api/v1/postback_subscription\",\n\t\"async\": false,\n\t\"soft_descriptor\": \"StarBem\",\n\t\"customer\": {\n\t\t\"name\": \"Michael teste\",\n\t\t\"email\": \"michaelito.regis@gmail.com\",\n\t\t\"document_number\": \"34100353898\",\n\t\t\"phone\": {\n\t\t\t\"ddd\": \"11\",\n\t\t\t\"number\": \"985409693\"\n\t\t}\n\t},\n\t\"items\": {\n\t\t\"id\": \"r20\",\n\t\t\"title\": \"StarBem Mensal Dependente\",\n\t\t\"unit_price\": \"2500\",\n\t\t\"quantity\": 3,\n\t\t\"tangible\": false\n\t},\n\t\"plan_id\": 512289\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_e5e13ed9a99f42cbba8ada4f1ee52b5f"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1600718206043,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_5f26ef6b7a994ba5a7b14801f795dde6",
+      "parentId": "fld_1e06c9a3566c4703b1e9a25906adf385",
+      "modified": 1600718237339,
+      "created": 1600718180636,
+      "name": "Subscription",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600718180636,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_678c86cfb5d04d6f8f23b61a04842416",
+      "parentId": "fld_5f26ef6b7a994ba5a7b14801f795dde6",
+      "modified": 1600719539318,
+      "created": 1600718782143,
+      "url": "https://api.pagar.me/1/subscriptions/subscription_id/cancel",
+      "name": "subscription cancel",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"api_key\": \"ak_test_rga8le0ENKdBcHPns13xkhDIwE3eqx\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_e5e13ed9a99f42cbba8ada4f1ee52b5f"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1600714489181,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_906a224d9e3a48d2bf10a97e1efe7ae8",
+      "parentId": "fld_5f26ef6b7a994ba5a7b14801f795dde6",
+      "modified": 1603492297857,
+      "created": 1600718868171,
+      "url": "https://api.pagar.me/1/subscriptions",
+      "name": "subscription get",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"api_key\": \"ak_test_QzLLTVUrBMIzDR9o7o9ovneClV96RJ\",\n\t\"count\": \"10\",\n\t\"page\": \"1\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4ef4286bd69644a4942fc99c8f9cd25c"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1600714489131,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_2f50d54fc7fb4d1c930dc5f4a4a1f09c",
+      "parentId": "fld_5f26ef6b7a994ba5a7b14801f795dde6",
+      "modified": 1603492314052,
+      "created": 1600718897036,
+      "url": "https://api.pagar.me/1/subscriptions/511180",
+      "name": "subscription get id",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"api_key\": \"ak_test_QzLLTVUrBMIzDR9o7o9ovneClV96RJ\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4ef4286bd69644a4942fc99c8f9cd25c"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1600712630725,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_30d885995fe2443594568e2c71e9116a",
+      "parentId": "fld_f29d07f495eb4189bf81b2f8b6be5c19",
+      "modified": 1603737106532,
+      "created": 1600729419352,
+      "url": "{{ local }}{{ apiPath }}auth",
+      "name": "login",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"username\": \"michaelito.regis@gmail.com\",\n\t\"password\": \"Mudar123\",\n\t\"type\": 3\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_5be759d7f6134382b630f06d26058532"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1600759656197.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_f29d07f495eb4189bf81b2f8b6be5c19",
+      "parentId": "wrk_5df8fa6817f1433a82f8bc84cc717f0a",
+      "modified": 1600789893043,
+      "created": 1600789893043,
+      "name": "Authentication",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600789893043,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_88b98783a7474d2bb7de0258730faaad",
+      "parentId": "fld_f29d07f495eb4189bf81b2f8b6be5c19",
+      "modified": 1602601665622,
+      "created": 1601595250425,
+      "url": "{{ online }}{{ apiPath }}auth/forgot",
+      "name": "forgot password",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\":\"rodolfo.scaloppe@gok.digital\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_5be759d7f6134382b630f06d26058532"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1600749293658.875,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_4d621c5011d94061b360cebe1bbb64e5",
+      "parentId": "fld_f29d07f495eb4189bf81b2f8b6be5c19",
+      "modified": 1602601721891,
+      "created": 1601678042743,
+      "url": "{{ online }}{{ apiPath }}auth/reset",
+      "name": "reset password",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\":\"rodolfo.scaloppe@gok.digital\",\n\t\"token\": \"6158\",\n\t\"password\": \"Mudar123\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_5be759d7f6134382b630f06d26058532"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1600728568581.625,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_7ddce4b15b1d4ec1b63ee31dd7405bff",
+      "parentId": "fld_26865c315117473ab90d05641314962f",
+      "modified": 1603124195258,
+      "created": 1603124195258,
+      "url": "{{ local }}{{ apiPath  }}address/bc52c7d0-1a80-4170-baf0-3a769029ea87",
+      "name": "address uuid",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599445593052.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_26865c315117473ab90d05641314962f",
+      "parentId": "fld_db40c96380144727bbe12a0da0c08a6c",
+      "modified": 1602043882091,
+      "created": 1602043873000,
+      "name": "Address",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600359649143.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_db40c96380144727bbe12a0da0c08a6c",
+      "parentId": "wrk_5df8fa6817f1433a82f8bc84cc717f0a",
+      "modified": 1602044092306,
+      "created": 1602043859718,
+      "name": "Dependent",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600578760262,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_3f250ddc98524cddba51f147c8c84fa3",
+      "parentId": "fld_26865c315117473ab90d05641314962f",
+      "modified": 1602259726168,
+      "created": 1602043873012,
+      "url": "{{ local }}{{ apiPath  }}address",
+      "name": "address create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"user_uuid\": \"a862d72c-6ea4-46c5-90ff-494486a524c8\",\n\t\"street\": \"Rua Artico\",\n\t\"number\": 78,\n\t\"complement\": \"casa 3\",\n\t\"zip\": \"03570250\",\n\t\"neighborhood\": \"Parque Savoy City\",\n\t\"city\": \"Cidade Lider\",\n\t\"state\": \"SP\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599369835737.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a5e8a383d6da464bb0bb9bc4838d2028",
+      "parentId": "fld_26865c315117473ab90d05641314962f",
+      "modified": 1602263881593,
+      "created": 1602263509714,
+      "url": "{{ local }}{{ apiPath  }}address/update",
+      "name": "address update",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"user_uuid\": \"a862d72c-6ea4-46c5-90ff-494486a524c8\",\n\t\"street\": \"Rua abbc\",\n\t\"number\": 78,\n\t\"complement\": \"casa 3\",\n\t\"zip\": \"03570250\",\n\t\"neighborhood\": \"Parque Savoy City\",\n\t\"city\": \"Cidade Lider\",\n\t\"state\": \"SP\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599369835687.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_bf7f651bad794735b36cd1aa24e49868",
+      "parentId": "fld_87a06ad8196c4b1fb474e11e31ace2b0",
+      "modified": 1602169909001,
+      "created": 1602043576426,
+      "url": "{{ local }}{{ apiPath  }}dependent",
+      "name": "dependent",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Dependente agora\",\n\t\"email\": \"emaildep@gmail.com\",\n\t\"document\": 11100022298\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_8dc325fea0814379b0c9f3463858c166"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599445593115,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_87a06ad8196c4b1fb474e11e31ace2b0",
+      "parentId": "fld_db40c96380144727bbe12a0da0c08a6c",
+      "modified": 1602043973905,
+      "created": 1602042123283,
+      "name": "Dependent",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600359649118.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_6cf2c2723d094cbd98d6804f6dfdcde1",
+      "parentId": "fld_87a06ad8196c4b1fb474e11e31ace2b0",
+      "modified": 1602127955109,
+      "created": 1602042123289,
+      "url": "{{ online }}{{ apiPath  }}dependent",
+      "name": "dependent",
+      "description": "",
+      "method": "GET",
+      "body": { "mimeType": "application/json", "text": "" },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_8dc325fea0814379b0c9f3463858c166"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599445593065,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_1c7f9217a52d414eaa53f8eb165f8927",
+      "parentId": "fld_87a06ad8196c4b1fb474e11e31ace2b0",
+      "modified": 1602128122065,
+      "created": 1602042262722,
+      "url": "{{ online }}{{ apiPath  }}dependent/097d0237-657e-46bf-a6b4-ed01bacad2b3",
+      "name": "dependent uuid",
+      "description": "",
+      "method": "GET",
+      "body": { "mimeType": "application/json", "text": "" },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_8dc325fea0814379b0c9f3463858c166"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599436123399.0938,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_8223694073c24bbdb912ef2c707968ad",
+      "parentId": "fld_87a06ad8196c4b1fb474e11e31ace2b0",
+      "modified": 1602048077757,
+      "created": 1602043436360,
+      "url": "{{ local }}{{ apiPath  }}dependent/b6c5234d-7b35-424a-8f1a-f5322219d9d4",
+      "name": "dependent uuid",
+      "description": "",
+      "method": "DELETE",
+      "body": { "mimeType": "application/json", "text": "" },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_8dc325fea0814379b0c9f3463858c166"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599431388566.1406,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0e56410f6cb94184a5ac3889821c9c09",
+      "parentId": "fld_0df6f2899c7f494cbd804fd37702a5d1",
+      "modified": 1602180014060,
+      "created": 1602178990517,
+      "url": "{{ local }}{{ apiPath  }}doctors_prescription/20cb777d-ce94-49e9-a73a-ffe3d80b55a2",
+      "name": "doctors_prescription user_uuid",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599426653733.1875,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_0df6f2899c7f494cbd804fd37702a5d1",
+      "parentId": "fld_db40c96380144727bbe12a0da0c08a6c",
+      "modified": 1602179659900,
+      "created": 1602178990501,
+      "name": "Doctor Prescription",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600359649112.25,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_510f9423b31848b6ab27513063dfa233",
+      "parentId": "fld_0df6f2899c7f494cbd804fd37702a5d1",
+      "modified": 1602180144491,
+      "created": 1602178990513,
+      "url": "{{ local }}{{ apiPath  }}doctors_prescription",
+      "name": "doctors_prescription create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"user_uuid_doctor\": \"b6c5234d-7b35-424a-8f1a-f5322219d9h2\",\n\t\"user_uuid\": \"bc52c7d0-1a80-4170-baf0-3a769029ea87\",\n\t\"prescription_id\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599369835737.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_812c55a91b0c47c3857991e348b9f208",
+      "parentId": "fld_bef3359db7794caa84de63025cedf102",
+      "modified": 1602243032482,
+      "created": 1602044004559,
+      "url": "{{ local }}{{ apiPath  }}medical_record/097d0237-657e-46bf-a6b4-ed01bacad2b3",
+      "name": "medical_record uuid",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599445593065,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_bef3359db7794caa84de63025cedf102",
+      "parentId": "fld_db40c96380144727bbe12a0da0c08a6c",
+      "modified": 1602044009891,
+      "created": 1602044004552,
+      "name": "Medical Record",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600359649106,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_cda13c7243804cabbb222c1a2271e483",
+      "parentId": "fld_bef3359db7794caa84de63025cedf102",
+      "modified": 1602331307100,
+      "created": 1602044004563,
+      "url": "{{ local }}{{ apiPath  }}medical_record",
+      "name": "medical_record create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"user_uuid\": \"bc52c7d0-1a80-4170-baf0-3a769029ea87\",\n\t\"weight\": 1.85,\n\t\"height\": 1.76,\n\t\"health_problems\": [\n\t\t1,\n\t\t2,\n\t\t3\n\t],\n\t\"continuous_remedy\": \"tomo dorflex todo dia\",\n\t\"medical_allergy_description\": \"sou alergico a dipirona\",\n\t\"pregnant\": \"2 semanas\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599369835737.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f4781cf2daa341a08101a828379cc581",
+      "parentId": "fld_bef3359db7794caa84de63025cedf102",
+      "modified": 1602331310864,
+      "created": 1602265324197,
+      "url": "{{ local }}{{ apiPath  }}medical_record/update",
+      "name": "medical_record update",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"user_uuid\": \"bc52c7d0-1a80-4170-baf0-3a769029ea87\",\n\t\"weight\": 1.85,\n\t\"height\": 1.76,\n\t\"health_problems\": [\n\t\t1,\n\t\t2,\n\t\t3,4\n\t],\n\t\"continuous_remedy\": \"tomo dorflex todo dia\",\n\t\"medical_allergy_description\": \"sou alergico a dipirona\",\n\t\"pregnant\": \"2 semanas\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599369835712.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_13831f6cb58d4dc7872802b636286adc",
+      "parentId": "fld_89d7492d79534c62996621f424519f2a",
+      "modified": 1603666985584,
+      "created": 1602172079784,
+      "url": "{{ local }}{{ apiPath  }}scheduling/scheduling_create",
+      "name": "scheduling create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"user_uuid_doctor\": \"1f02eeb4-9f66-4fa9-b3c7-e24032a1f8c4\",\n\t\"user_uuid\": \"e15aa580-a895-48af-a4cf-44d9ecd6e716\",\n\t\"scheduling_date\": \"2020-10-20 14:03:03\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599350896405.9375,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_89d7492d79534c62996621f424519f2a",
+      "parentId": "fld_db40c96380144727bbe12a0da0c08a6c",
+      "modified": 1602172086516,
+      "created": 1602172079761,
+      "name": "Scheduling",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600359649099.75,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_1cee32e410184db199ac45ea6ba0c736",
+      "parentId": "fld_89d7492d79534c62996621f424519f2a",
+      "modified": 1602784634438,
+      "created": 1602784392001,
+      "url": "{{ local }}{{ apiPath  }}scheduling/scheduling_count",
+      "name": "scheduling count",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"user_uuid\": \"2b690122-3ef0-4b19-ab48-3a120ffe68e2\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599350896355.9375,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_2c7a8917e07640e7b2c7f592e7e51a53",
+      "parentId": "fld_89d7492d79534c62996621f424519f2a",
+      "modified": 1603666897855,
+      "created": 1603665930431,
+      "url": "{{ local }}{{ apiPath  }}scheduling/scheduling_verify",
+      "name": "scheduling verify",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"user_uuid\": \"e15aa580-a895-48af-a4cf-44d9ecd6e716\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599350896305.9375,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f2814ca78981441281efa4ae4df649fd",
+      "parentId": "fld_ed709e5872c54eb0b9e03d7e26b80c27",
+      "modified": 1602111125797,
+      "created": 1602043859725,
+      "url": "{{ local }}{{ apiPath  }}personal_data",
+      "name": "personal",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599445593065,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_ed709e5872c54eb0b9e03d7e26b80c27",
+      "parentId": "fld_db40c96380144727bbe12a0da0c08a6c",
+      "modified": 1602043859722,
+      "created": 1602043859722,
+      "name": "Personal Data",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600359649093.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_5d17a71acf024f6c8f0e62eb81c68639",
+      "parentId": "fld_ed709e5872c54eb0b9e03d7e26b80c27",
+      "modified": 1602128152649,
+      "created": 1602045611293,
+      "url": "{{ online }}{{ apiPath  }}personal_data/097d0237-657e-46bf-a6b4-ed01bacad2b3",
+      "name": "personal uuid",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599407714401.375,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_dd8d1f14b3ec409ca0f5e12707b28379",
+      "parentId": "fld_ed709e5872c54eb0b9e03d7e26b80c27",
+      "modified": 1602331273328,
+      "created": 1602043859729,
+      "url": "{{ local }}{{ apiPath  }}personal_data",
+      "name": "personal create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"user_uuid\": \"bc52c7d0-1a80-4170-baf0-3a769029ea87\",\n\t\"birth_day\": \"2020-05-05\",\n\t\"mother_name\": \"mae do Dependnete\",\n\t\"gender\": \"M\",\n\t\"cellphone\": \"11985409693\",\n\t\"document\": \"11122233366\"\n}\n"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ token }}",
+          "description": "",
+          "id": "pair_c6342582b79c4db2b1f057a0ed9b8d9a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599369835737.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_b84e4d94f88545f99c79477a180964bc",
+      "parentId": "fld_ed709e5872c54eb0b9e03d7e26b80c27",
+      "modified": 1602331278622,
+      "created": 1602033315405,
+      "url": "{{ local }}{{ apiPath  }}personal_data/update",
+      "name": "personal update",
+      "description": "Os campos profile,name,date_birth date ,mother_name,gender,weight,height,cellphone,national_registration. São os únicos campos aceitos para atualizar. No campo body somente passe os campos que serão atualizados.",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"user_uuid\": \"bc52c7d0-1a80-4170-baf0-3a769029ea87\",\n\t\"birth_day\": \"2020-05-05\",\n\t\"mother_name\": \"asdfasdf\",\n\t\"gender\": \"M\",\n\t\"cellphone\": \"11985409693\",\n\t\"document\": \"11122233366\"\n}\n"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "disabled": false,
+        "prefix": "",
+        "token": "{{ token }}"
+      },
+      "metaSortKey": -1599369835637.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_cd5bf6deb8c04a7192c9167c4b3f3732",
+      "parentId": "fld_7297837eeccc41588fd075f2dd4da832",
+      "modified": 1602048117287,
+      "created": 1602044034060,
+      "url": "{{ local }}{{ apiPath }}user_products",
+      "name": "product",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ token }}",
+        "disabled": false
+      },
+      "metaSortKey": -1600831902187,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_7297837eeccc41588fd075f2dd4da832",
+      "parentId": "fld_db40c96380144727bbe12a0da0c08a6c",
+      "modified": 1602044049143,
+      "created": 1602044034053,
+      "name": "User Plans",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600359649043.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_7b5721756b914334b78626490d3dd56c",
+      "parentId": "fld_c44f0b77dd6240a39f45f58d6ea4c097",
+      "modified": 1603069427903,
+      "created": 1603069427903,
+      "url": "{{ local }}{{ apiPath }}users",
+      "name": "user",
+      "description": "",
+      "method": "GET",
+      "body": { "mimeType": "application/json", "text": "" },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_8dc325fea0814379b0c9f3463858c166"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599445593065,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_c44f0b77dd6240a39f45f58d6ea4c097",
+      "parentId": "fld_db40c96380144727bbe12a0da0c08a6c",
+      "modified": 1603069435412,
+      "created": 1603069427897,
+      "name": "User",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600359648993.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_b4288be0536d435081acb0e7d6614385",
+      "parentId": "fld_c44f0b77dd6240a39f45f58d6ea4c097",
+      "modified": 1603069536693,
+      "created": 1603069427906,
+      "url": "{{ local }}{{ apiPath  }}users/edit_user",
+      "name": "user edit",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"user_uuid\": \"607f7e9c-7be0-4c0c-895e-2781acab1760\",\n\t\"name\": \"medico teste\",\n\t\"email\": \"medico@gmail.com\",\n\t\"celular\": \"11985409693\",\n\t\"img\": \"bbbbb\",\n\t\"professional_document_type\": \"abc\",\n\t\"professional_document_uf\": \"SP\",\n\t\"professional_document_number\": \"123\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_d88a289a30534403983612f1ea67c595"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599426653733.1875,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9c0b3afe7dfc43f8b8514ab0ab1dedeb",
+      "parentId": "fld_6cdb3c74fc1b4073beab4ad7ce21c977",
+      "modified": 1603198738104,
+      "created": 1600449365501,
+      "url": "{{ local }}{{ apiPath  }}doctor_schedule",
+      "name": "doctor_schedule",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"status\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_31c30c7118e54e0cb5093d1886f499b8"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599294078410.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_6cdb3c74fc1b4073beab4ad7ce21c977",
+      "parentId": "fld_6b7ab23851e241f28457a9d4729eac36",
+      "modified": 1602290503608,
+      "created": 1600449365493,
+      "name": "Doctor Schedule",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600565564463.1875,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_6b7ab23851e241f28457a9d4729eac36",
+      "parentId": "wrk_5df8fa6817f1433a82f8bc84cc717f0a",
+      "modified": 1602290494086,
+      "created": 1602290486176,
+      "name": "Doctor",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600572162362.5938,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_fdeec90a39e24fd19d79ed08f7ec0c4d",
+      "parentId": "fld_6cdb3c74fc1b4073beab4ad7ce21c977",
+      "modified": 1602326825261,
+      "created": 1602285396328,
+      "url": "{{ local }}{{ apiPath  }}doctor_schedule",
+      "name": "doctor_schedule create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"day\": \"Domingo\",\n\t\"ordernar\": 2,\n\t\"start_time\": \"08:00:00\",\n\t\"end_time\": \"18:00:00\",\n\t\"start_pause\": \"12:00:00\",\n\t\"end_pause\": \"13:00:00\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599294078385.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_bcc36a180f1a445e90006d3f0b7b2016",
+      "parentId": "fld_6cdb3c74fc1b4073beab4ad7ce21c977",
+      "modified": 1602326832353,
+      "created": 1602286480331,
+      "url": "{{ online }}{{ apiPath  }}doctor_schedule/64d0cd03-d4cf-4258-aefe-fff047c8e47b",
+      "name": "doctor_schedule update",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"day\": \"Segunda-Feira\",\n\t\"ordernar\": 5,\n\t\"start_time\": \"08:00:00\",\n\t\"end_time\": \"18:00:00\",\n\t\"start_pause\": \"12:00:00\",\n\t\"end_pause\": \"13:00:00\",\n\t\"status\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599294078379.25,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9f390cfad0514987aa4b73b97614bf8c",
+      "parentId": "fld_e57f06ef8c974f9a9a51ed232a957fef",
+      "modified": 1603901136029,
+      "created": 1602299784693,
+      "url": "{{ online }}{{ apiPath  }}medical_record_question",
+      "name": "medical_record all",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"uuid_user\": \"e722e3d8-bd11-4350-97b6-e037d62609b9\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_009b9a6f764248939368aa0b6dcf5bc4"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599445593065,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_e57f06ef8c974f9a9a51ed232a957fef",
+      "parentId": "fld_6b7ab23851e241f28457a9d4729eac36",
+      "modified": 1603219426965,
+      "created": 1602299784688,
+      "name": "Medical Record Question",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600565564438.1875,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_b8997426cc014b1cb80e769fd4d9193d",
+      "parentId": "fld_e57f06ef8c974f9a9a51ed232a957fef",
+      "modified": 1603901798129,
+      "created": 1602299784700,
+      "url": "{{ online }}{{ apiPath  }}medical_record_question/5a750074-00b6-4377-b9db-df525380160d",
+      "name": "medical_record uuid",
+      "description": "",
+      "method": "GET",
+      "body": { "mimeType": "application/json", "text": "" },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_8e58f28da81d4d6fbba83ea9471d4c1c"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599440858232.0469,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_8096e862ac2548b9b9605676fc8dfd8a",
+      "parentId": "fld_e57f06ef8c974f9a9a51ed232a957fef",
+      "modified": 1603902236164,
+      "created": 1603902151913,
+      "url": "{{ online }}{{ apiPath  }}medical_record_question/new_medical_record/8ec61692-20c9-45fe-a6a2-b583ea0b9cfc",
+      "name": "medical_record uuid_scheduling",
+      "description": "",
+      "method": "GET",
+      "body": { "mimeType": "application/json", "text": "" },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_8e58f28da81d4d6fbba83ea9471d4c1c"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599438490815.5703,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_b26e521ddadd4b7cba7df5f3026aa647",
+      "parentId": "fld_e57f06ef8c974f9a9a51ed232a957fef",
+      "modified": 1603901150241,
+      "created": 1602299784696,
+      "url": "{{ online }}{{ apiPath  }}medical_record_question",
+      "name": "medical_record create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"user_uuid\":\"e722e3d8-bd11-4350-97b6-e037d62609b9\",\n\t\"complaint\": \"Dor de cabeça\",\n\t\"history\": \"Sem dor de cabeça\",\n\t\"pathological_background\":\"n/a\",\n\t\"exams\":\"sangue\",\n\t\"hypothesis\":\"Vista cansada\",\n\t\"clinical_impression\": \"teste\",\n\t\"conduct\":\"teste\",\n\t\"heart_rate\": \"15\",\n\t\"systolic_blood_pressure\": \"16\",\n\t\"diastolic_blood_pressure\": \"27\",\n\t\"respiratory_frequency\": \"20\",\n\t\"co2_saturation\": \"232\",\n\t\"physical_exam\": \"orem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper est eu dui placerat, et finibus metus interdum. Sed pellentesque libero nec orci lobortis consectetur.\"\n\t\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599369835737.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0b87a88276614638aac08c94df4022fd",
+      "parentId": "fld_e57f06ef8c974f9a9a51ed232a957fef",
+      "modified": 1602389427627,
+      "created": 1602299784702,
+      "url": "{{ online }}{{ apiPath  }}medical_record_question/update",
+      "name": "medical_record update",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"user_uuid\":\"a712127c-9f0a-4d32-a887-5282598ac128\",\n\t\"uuid\": \"e68dba72-3b2c-4dfd-b8b2-ff793fc4bb9f\",\n\t\"complaint\": \"Dor de cabeça\",\n\t\"history\": \"Sem dor de cabeça\",\n\t\"pathological_background\":\"teste\",\n\t\"exams\":\"sangue\",\n\t\"hypothesis\":\"teste\",\n\t\"clinical_impression\": \"teste\",\n\t\"conduct\":\"teste\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599369835725.25,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_59881a24ab2447a6b6026379220cea0d",
+      "parentId": "fld_7bee0fc80e46474aaa84c07250112344",
+      "modified": 1603627651553,
+      "created": 1602290516903,
+      "url": "{{ local }}{{ apiPath  }}scheduling",
+      "name": "scheduling",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"status\": 3\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_8dc325fea0814379b0c9f3463858c166"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599445593065,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_7bee0fc80e46474aaa84c07250112344",
+      "parentId": "fld_6b7ab23851e241f28457a9d4729eac36",
+      "modified": 1602290519771,
+      "created": 1602290516896,
+      "name": "Scheduling",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600565564413.1875,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_d4c46026a93a4347a70e266a173a33a6",
+      "parentId": "fld_7bee0fc80e46474aaa84c07250112344",
+      "modified": 1602326861353,
+      "created": 1602022108331,
+      "url": "{{ local }}{{ apiPath  }}scheduling/process",
+      "name": "scheduling start/end",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"scheduling_uuid\": \"929bfac6-3b30-4da6-b139-a3b0a13807ff\",\n\t\"status\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599445593040,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f3fac32528cb4059bf602f51c1dc5c97",
+      "parentId": "fld_7bee0fc80e46474aaa84c07250112344",
+      "modified": 1602326859757,
+      "created": 1602029560288,
+      "url": "{{ local }}{{ apiPath  }}scheduling/process",
+      "name": "scheduling cancel",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"scheduling_uuid\": \"929bfac6-3b30-4da6-b139-a3b0a13807ff\",\n\t\"cancel_service_description\": \"cancelado porque não teve RG\",\n\t\"status\": 3\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599445593015,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e5d2b66ea3b04028a5ec6517ab285060",
+      "parentId": "fld_734ed9e414cd4dd5934d2ce5bcf62a17",
+      "modified": 1603373114071,
+      "created": 1602043873007,
+      "url": "{{ online }}{{ apiPath  }}users/user_doctor",
+      "name": "user",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1600831902187,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_734ed9e414cd4dd5934d2ce5bcf62a17",
+      "parentId": "fld_6b7ab23851e241f28457a9d4729eac36",
+      "modified": 1603373030976,
+      "created": 1600354675198,
+      "name": "User",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600565564363.1875,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_34eb2e92639f4904aa5808d465d4da93",
+      "parentId": "fld_734ed9e414cd4dd5934d2ce5bcf62a17",
+      "modified": 1603377537018,
+      "created": 1603376730994,
+      "url": "{{ local }}{{ apiPath  }}users/edit_user",
+      "name": "user edit",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Michael teste\",\n\t\"email\": \"michaelito.regis@gmail.com\",\n\t\"img\": \"\",\n\t\"password\": \"Mudar123\",\n\t\"document\": \"34100353899\",\n\t\"mother_name\": \"mae teste\",\n\t\"cellphone\": \"11985409693\",\n\t\"professional_document_type\": \"CRM\",\n\t\"professional_document_uf\": \"SP\",\n\t\"professional_document_number\": \"123456\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1600813840664.625,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_63d18a19b9ef46de89395be8d7b7d949",
+      "parentId": "fld_734ed9e414cd4dd5934d2ce5bcf62a17",
+      "modified": 1603373138143,
+      "created": 1601642270555,
+      "url": "{{ online }}{{ apiPath  }}users/dcaeff00-68e5-4c98-8fcd-df26897ac358",
+      "name": "user delete",
+      "description": "Verifica se o usuário já validou o código(token) e se não cadastrou a senha e o nome.\nNo cadastro da senha e nome, retorna o Token(JWT) para continuar o processo de autenticação na API.",
+      "method": "DELETE",
+      "body": { "mimeType": "application/json", "text": "" },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4a4a532a0b404208b0bfdacfb474ba24"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1600795779142.25,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_36cccb9a09a3411192e94930e7f4f6c3",
+      "parentId": "fld_e27f97668b6c43ed9145452f65fd1b13",
+      "modified": 1602508527829,
+      "created": 1601078848476,
+      "url": "{{ local }}{{ apiPath  }}faq",
+      "name": "faq",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"question\": \"Michael\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_e84f98e3cac440a08ec2fc2e998c5c60"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599294078410.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_e27f97668b6c43ed9145452f65fd1b13",
+      "parentId": "wrk_5df8fa6817f1433a82f8bc84cc717f0a",
+      "modified": 1602044114321,
+      "created": 1601078848469,
+      "name": "Faq",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600552368664.375,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_79c2e3345aa54f93a60136f5c369c0d2",
+      "parentId": "fld_e27f97668b6c43ed9145452f65fd1b13",
+      "modified": 1602174944967,
+      "created": 1602174290574,
+      "url": "{{ local }}{{ apiPath  }}faq",
+      "name": "faq create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"question\":\"Preciso da 2 via do boleto. E agora?\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_e84f98e3cac440a08ec2fc2e998c5c60"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599294078385.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_bef5c8d131294b95aa1776eeb2d6c57b",
+      "parentId": "fld_e27f97668b6c43ed9145452f65fd1b13",
+      "modified": 1602179006027,
+      "created": 1602174395559,
+      "url": "{{ local }}{{ apiPath  }}doctors_prescription",
+      "name": "faq create answer",
+      "description": "",
+      "method": "POST",
+      "body": { "mimeType": "application/json", "text": "" },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_e84f98e3cac440a08ec2fc2e998c5c60"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599294078373,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_6aa06cca45174586b01efdc068d95cd5",
+      "parentId": "fld_d2608971417d40e7bedd1926ec8f0594",
+      "modified": 1602048189365,
+      "created": 1600383517961,
+      "url": "{{ local }}{{ apiPath  }}health_problems",
+      "name": "health-problems",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599294078410.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_d2608971417d40e7bedd1926ec8f0594",
+      "parentId": "wrk_5df8fa6817f1433a82f8bc84cc717f0a",
+      "modified": 1602044106269,
+      "created": 1600383517951,
+      "name": "Health Problems",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600525977066.75,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_dbe6a66442334a1f9ba5e01c0bf68f4c",
+      "parentId": "fld_f8561e96169f4338a040e2ee37555b97",
+      "modified": 1602048197936,
+      "created": 1600979163044,
+      "url": "{{ local }}{{ apiPath  }}partner",
+      "name": "partner",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "basic",
+        "disabled": false,
+        "username": "{{ token }}",
+        "password": ""
+      },
+      "metaSortKey": -1599407714401.375,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_f8561e96169f4338a040e2ee37555b97",
+      "parentId": "wrk_5df8fa6817f1433a82f8bc84cc717f0a",
+      "modified": 1602044097876,
+      "created": 1600979139774,
+      "name": "Partner",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600473193871.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_04aa7e0c84404e0298dde68a966b6522",
+      "parentId": "fld_f8561e96169f4338a040e2ee37555b97",
+      "modified": 1602048201316,
+      "created": 1600984002826,
+      "url": "{{ local }}{{ apiPath  }}partner",
+      "name": "partner create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"created_id\": 1,\n\t\"unit_id\": 12345,\n\t\"unit_name\": \"teste\",\n\t\"phone\": 11985409693,\n\t\"street\": \"Rua\",\n\t\"number\": 123,\n\t\"complement\": \"abc\",\n\t\"zip\": \"09280360\",\n\t\"neighborhood\": \"bairro\",\n\t\"city\": \"cidade\",\n\t\"state\": \"sp\",\n\t\"zone\": \"zona leste\",\n\t\"latitude\": \"-123456\",\n\t\"longitude\": \"-123456\",\n\t\"country\": \"pais\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_16762d879e51478295545c2212445660"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599388775069.5625,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_3bd3a632a3ac49e3a7c0920b3c4fac82",
+      "parentId": "fld_3e780370a7ac4e4abf70a5ba2c75cf67",
+      "modified": 1603175231328,
+      "created": 1600367637520,
+      "url": "{{ online }}{{ apiPath  }}products",
+      "name": "products",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599445593065,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_3e780370a7ac4e4abf70a5ba2c75cf67",
+      "parentId": "wrk_5df8fa6817f1433a82f8bc84cc717f0a",
+      "modified": 1600367627481,
+      "created": 1600367627481,
+      "name": "Products",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600367627481,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_9ae69983a64e410c8901940e44063ceb",
+      "parentId": "fld_3e780370a7ac4e4abf70a5ba2c75cf67",
+      "modified": 1603146750819,
+      "created": 1600891635886,
+      "url": "{{ local }}{{ apiPath  }}products",
+      "name": "products create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"title\": \"Plano StarBem + 10 Dependente\",\n\t\"term\": \"term term term\",\n\t\"amount\":118.90,\n\t\"fine\": 1,\n\t\"type\": 1,\n\t\"days\": 30\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599369835737.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_837cf1d9955f47ca859b947943fd6937",
+      "parentId": "fld_3812f805a4a84700bdafc9f3aef4348b",
+      "modified": 1602048238916,
+      "created": 1601499301865,
+      "url": "{{ local }}{{ apiPath  }}address",
+      "name": "address",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599445593065,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_3812f805a4a84700bdafc9f3aef4348b",
+      "parentId": "fld_59f0937a720d48658e05c55dde401b3a",
+      "modified": 1602043886849,
+      "created": 1601499301856,
+      "name": "Address",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600359649143.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_59f0937a720d48658e05c55dde401b3a",
+      "parentId": "wrk_5df8fa6817f1433a82f8bc84cc717f0a",
+      "modified": 1602043795372,
+      "created": 1602043795372,
+      "name": "Titular",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600364436126,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_2ded14526596457a997d18a19d038e02",
+      "parentId": "fld_3812f805a4a84700bdafc9f3aef4348b",
+      "modified": 1602165949811,
+      "created": 1601499301870,
+      "url": "{{ local }}{{ apiPath  }}address",
+      "name": "address create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"street\": \"Rua Artico\",\n\t\"number\": 78,\n\t\"complement\": \"casa 3\",\n\t\"zip\": \"03570250\",\n\t\"neighborhood\": \"Parque Savoy City\",\n\t\"city\": \"Cidade Lider\",\n\t\"state\": \"SP\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599369835737.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_80a51c2c7f5146889cc8d829722a819e",
+      "parentId": "fld_3812f805a4a84700bdafc9f3aef4348b",
+      "modified": 1602263846551,
+      "created": 1602261799340,
+      "url": "{{ local }}{{ apiPath  }}address/update",
+      "name": "address update",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"street\": \"Rua abbc\",\n\t\"number\": 78,\n\t\"complement\": \"casa 3\",\n\t\"zip\": \"03570250\",\n\t\"neighborhood\": \"Parque Savoy City\",\n\t\"city\": \"Cidade Lider\",\n\t\"state\": \"SP\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599369835687.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e307ad8fd659451787dcc18652d4be08",
+      "parentId": "fld_2e2a3d4efca1444f8fcb4df7cd31e8e6",
+      "modified": 1602048245256,
+      "created": 1602021656816,
+      "url": "{{ local }}{{ apiPath  }}scheduling/e6289g45-9f97-4eb9-9d32-56c8963bffa7",
+      "name": "scheduling update",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"star\": 2,\n\t\"consultation_evaluation\": \"foi otima asdf\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599331957074.125,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_2e2a3d4efca1444f8fcb4df7cd31e8e6",
+      "parentId": "fld_59f0937a720d48658e05c55dde401b3a",
+      "modified": 1602043991716,
+      "created": 1602021656800,
+      "name": "Consultation Evaluation",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600359649118.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_f2331f2b074647fabfce607e4ff8a3bd",
+      "parentId": "fld_13f3b657eab64ae58035f8d853af8ed0",
+      "modified": 1602180096658,
+      "created": 1602179652890,
+      "url": "{{ local }}{{ apiPath  }}scheduling",
+      "name": "doctors_prescription",
+      "description": "",
+      "method": "GET",
+      "body": { "mimeType": "application/json", "text": "" },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_8dc325fea0814379b0c9f3463858c166"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599445593065,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_13f3b657eab64ae58035f8d853af8ed0",
+      "parentId": "fld_59f0937a720d48658e05c55dde401b3a",
+      "modified": 1602179652885,
+      "created": 1602179652885,
+      "name": "Doctor Prescription",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600359649109.125,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_713123f30c2042e1ae2cf7b0f1bd1310",
+      "parentId": "fld_13f3b657eab64ae58035f8d853af8ed0",
+      "modified": 1602180106378,
+      "created": 1602179652893,
+      "url": "{{ local }}{{ apiPath  }}doctors_prescription",
+      "name": "doctors_prescription create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"user_uuid_doctor\": \"b6c5234d-7b35-424a-8f1a-f5322219d9h2\",\n\t\"prescription_id\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599369835737.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0f3cf3805637455990e991d4eaaa8692",
+      "parentId": "fld_35f77b3ab2454f6b92e0bb91cac0f302",
+      "modified": 1602243056677,
+      "created": 1601505435996,
+      "url": "{{ local }}{{ apiPath  }}medical_record",
+      "name": "medical_record",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599445593065,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_35f77b3ab2454f6b92e0bb91cac0f302",
+      "parentId": "fld_59f0937a720d48658e05c55dde401b3a",
+      "modified": 1602044007258,
+      "created": 1601505435985,
+      "name": "Medical Record",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600359649106,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_2a007c1fbcf34300935b3e8705b7631a",
+      "parentId": "fld_35f77b3ab2454f6b92e0bb91cac0f302",
+      "modified": 1602331294117,
+      "created": 1601505436004,
+      "url": "{{ local }}{{ apiPath  }}medical_record",
+      "name": "medical_record create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"weight\": 1.85,\n\t\"height\": 1.76,\n\t\"health_problems\": [\n\t\t1,\n\t\t2,\n\t\t3,\n\t\t4,\n\t\t5\n\t],\n\t\"continuous_remedy\": \"tomo dorflex todo dia\",\n\t\"medical_allergy_description\": \"sou alergico a dipirona\",\n\t\"pregnant\": \"2 semanas\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599369835737.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_57c9c56f844c4873880958d7f8b7354c",
+      "parentId": "fld_35f77b3ab2454f6b92e0bb91cac0f302",
+      "modified": 1602331300127,
+      "created": 1602265399481,
+      "url": "{{ local }}{{ apiPath  }}medical_record/update",
+      "name": "medical_record update",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"weight\": 1.85,\n\t\"height\": 1.76,\n\t\"health_problems\": [\n\t\t1,\n\t\t2,\n\t\t3\n\t],\n\t\"continuous_remedy\": \"tomo dorflex todo dia\",\n\t\"medical_allergy_description\": \"sou alergico a dipirona\",\n\t\"pregnant\": \"2 semanas\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599369835725.25,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_b9d4a0314dbd441d8d6af5d33a994c0d",
+      "parentId": "fld_fa01dec6d1cf42039f3ebc3cd7325ae9",
+      "modified": 1603939214491,
+      "created": 1602680995314,
+      "url": "{{ local }}{{ apiPath  }}payment",
+      "name": "payment credit_card",
+      "description": "Verifica se o usuário já validou o código(token) e se não cadastrou a senha e o nome.\nNo cadastro da senha e nome, retorna o Token(JWT) para continuar o processo de autenticação na API.",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"product_uuid\": \"e6289f23-9f97-4eb9-9d32-56c8963bffa7\",\n\t\"card_number\": \"4111111111111111\",\n\t\"card_cvv\": \"123\",\n\t\"card_expiration_date\": \"0922\",\n\t\"card_holder_name\": \"Michael Teste titual\",\n\t\"payment_method\": \"credit_card\",\n\t\"billing\": {\n\t\t\"name\": \"Trinity Moss\",\n\t\t\"address\": {\n\t\t\t\"country\": \"br\",\n\t\t\t\"state\": \"sp\",\n\t\t\t\"city\": \"Cotia\",\n\t\t\t\"neighborhood\": \"Rio Cotia\",\n\t\t\t\"street\": \"Rua Matrix\",\n\t\t\t\"street_number\": \"9999\",\n\t\t\t\"zipcode\": \"06714360\"\n\t\t}\n\t},\n\t\"dependents\": []\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4a4a532a0b404208b0bfdacfb474ba24"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1600831902212,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_fa01dec6d1cf42039f3ebc3cd7325ae9",
+      "parentId": "fld_59f0937a720d48658e05c55dde401b3a",
+      "modified": 1602681016068,
+      "created": 1602680995304,
+      "name": "Payment",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600359649098.1875,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_cd6db403c519409fa0c9fba17356c49f",
+      "parentId": "fld_fa01dec6d1cf42039f3ebc3cd7325ae9",
+      "modified": 1603928766123,
+      "created": 1602680995310,
+      "url": "{{ local }}{{ apiPath  }}payment",
+      "name": "payment titular + dep credit_card",
+      "description": "Verifica se o usuário já validou o código(token) e se não cadastrou a senha e o nome.\nNo cadastro da senha e nome, retorna o Token(JWT) para continuar o processo de autenticação na API.",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"product_uuid\": \"e6289f23-9f97-4eb9-9d32-56c8963bffa7\",\n\t\"card_number\": \"4111111111111111\",\n\t\"card_cvv\": \"123\",\n\t\"card_expiration_date\": \"0922\",\n\t\"card_holder_name\": \"Morpheus Fishburne\",\n\t\"payment_method\": \"credit_card\",\n\t\"transaction_uuid\": \"\",\n\t\"billing\": {\n\t\t\"name\": \"Trinity Moss\",\n\t\t\"address\": {\n\t\t\t\"country\": \"br\",\n\t\t\t\"state\": \"sp\",\n\t\t\t\"city\": \"Cotia\",\n\t\t\t\"neighborhood\": \"Rio Cotia\",\n\t\t\t\"street\": \"Rua Matrix\",\n\t\t\t\"street_number\": \"9999\",\n\t\t\t\"zipcode\": \"06714360\"\n\t\t}\n\t},\n\t\"dependents\": [\n\t\t{\n\t\t\t\"full_name\": \"Dependente elis\",\n\t\t\t\"email\": \"dependente1@gmail.com\",\n\t\t\t\"document\": \"34100353898\",\n\t\t\t\"mother_name\": \"mae do dependente 1\",\n\t\t\t\"gender\": \"Feminino\",\n\t\t\t\"birth_day\": \"2020-05-05\"\n\t\t}\n\t]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4a4a532a0b404208b0bfdacfb474ba24"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1600831902208.875,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_1ab065fe44a84f5186b6b3d660067f12",
+      "parentId": "fld_fa01dec6d1cf42039f3ebc3cd7325ae9",
+      "modified": 1603928790433,
+      "created": 1602681954055,
+      "url": "{{ local }}{{ apiPath  }}payment",
+      "name": "payment billet",
+      "description": "Verifica se o usuário já validou o código(token) e se não cadastrou a senha e o nome.\nNo cadastro da senha e nome, retorna o Token(JWT) para continuar o processo de autenticação na API.",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"product_uuid\": \"e6289f23-9f97-4eb9-9d32-56c8963bffa7\",\n\t\"payment_method\": \"boleto\",\n\t\"billing\": {\n\t\t\"name\": \"Trinity Moss\",\n\t\t\"address\": {\n\t\t\t\"country\": \"br\",\n\t\t\t\"state\": \"sp\",\n\t\t\t\"city\": \"Cotia\",\n\t\t\t\"neighborhood\": \"Rio Cotia\",\n\t\t\t\"street\": \"Rua Matrix\",\n\t\t\t\"street_number\": \"9999\",\n\t\t\t\"zipcode\": \"06714360\"\n\t\t}\n\t},\n\t\"dependents\": []\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4a4a532a0b404208b0bfdacfb474ba24"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1600831902205.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_8e5ac2d19aaa4c868e2278621119d405",
+      "parentId": "fld_fa01dec6d1cf42039f3ebc3cd7325ae9",
+      "modified": 1603928758972,
+      "created": 1602681989471,
+      "url": "{{ local }}{{ apiPath  }}payment",
+      "name": "payment titular + dep boleto",
+      "description": "Verifica se o usuário já validou o código(token) e se não cadastrou a senha e o nome.\nNo cadastro da senha e nome, retorna o Token(JWT) para continuar o processo de autenticação na API.",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"product_uuid\": \"e6289f23-9f97-4eb9-9d32-56c8963bffa7\",\n\t\"payment_method\": \"boleto\",\n\t\"billing\": {\n\t\t\"name\": \"Trinity Moss\",\n\t\t\"address\": {\n\t\t\t\"country\": \"br\",\n\t\t\t\"state\": \"sp\",\n\t\t\t\"city\": \"Cotia\",\n\t\t\t\"neighborhood\": \"Rio Cotia\",\n\t\t\t\"street\": \"Rua Matrix\",\n\t\t\t\"street_number\": \"9999\",\n\t\t\t\"zipcode\": \"06714360\"\n\t\t}\n\t},\n\t\"dependents\": [\n\t\t{\n\t\t\t\"full_name\": \"Dependente elis\",\n\t\t\t\"email\": \"dependente1@gmail.com\",\n\t\t\t\"document\": \"11122233366\",\n\t\t\t\"mother_name\": \"mae do dependente 1\",\n\t\t\t\"gender\": \"Feminino\",\n\t\t\t\"birth_day\": \"2020-05-05\"\n\t\t},\n\t\t{\n\t\t\t\"full_name\": \"Dependente bb\",\n\t\t\t\"email\": \"dependente2@gmail.com\",\n\t\t\t\"document\": \"11122233366\",\n\t\t\t\"mother_name\": \"mae do dependente 2\",\n\t\t\t\"gender\": \"Masculino\",\n\t\t\t\"birth_day\": \"2020-05-05\"\n\t\t}\n\t]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4a4a532a0b404208b0bfdacfb474ba24"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1600831902182.3125,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_169ec349ff1a46b28179844777cfefcd",
+      "parentId": "fld_fa01dec6d1cf42039f3ebc3cd7325ae9",
+      "modified": 1603928806335,
+      "created": 1602907518036,
+      "url": "{{ local }}{{ apiPath  }}payment",
+      "name": "payment credit_card subscription",
+      "description": "Verifica se o usuário já validou o código(token) e se não cadastrou a senha e o nome.\nNo cadastro da senha e nome, retorna o Token(JWT) para continuar o processo de autenticação na API.",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"product_uuid\": \"e6289g45-9f97-4eb9-9d32-56c8963bffb8\",\n\t\"card_number\": \"4111111111111111\",\n\t\"card_cvv\": \"123\",\n\t\"card_expiration_date\": \"0922\",\n\t\"card_holder_name\": \"Michael Teste titual\",\n\t\"payment_method\": \"credit_card\",\n\t\t\"billing\": {\n\t\t\"name\": \"Trinity Moss\",\n\t\t\"address\": {\n\t\t\t\"country\": \"br\",\n\t\t\t\"state\": \"sp\",\n\t\t\t\"city\": \"Cotia\",\n\t\t\t\"neighborhood\": \"Rio Cotia\",\n\t\t\t\"street\": \"Rua Matrix\",\n\t\t\t\"street_number\": \"9999\",\n\t\t\t\"zipcode\": \"06714360\"\n\t\t}\n\t},\n\t\"dependents\": []\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4a4a532a0b404208b0bfdacfb474ba24"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1600831902158.875,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0b10984efc7b42e1a619fdde76762f51",
+      "parentId": "fld_fa01dec6d1cf42039f3ebc3cd7325ae9",
+      "modified": 1603928815381,
+      "created": 1602909150084,
+      "url": "{{ local }}{{ apiPath  }}payment",
+      "name": "payment titular + dep credit_card subscription",
+      "description": "Verifica se o usuário já validou o código(token) e se não cadastrou a senha e o nome.\nNo cadastro da senha e nome, retorna o Token(JWT) para continuar o processo de autenticação na API.",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"product_uuid\": \"e6289g45-9f97-4eb9-9d32-56c8963bffb8\",\n\t\"card_number\": \"4111111111111111\",\n\t\"card_cvv\": \"123\",\n\t\"card_expiration_date\": \"0922\",\n\t\"card_holder_name\": \"Morpheus Fishburne\",\n\t\"payment_method\": \"credit_card\",\n\t\t\"billing\": {\n\t\t\"name\": \"Trinity Moss\",\n\t\t\"address\": {\n\t\t\t\"country\": \"br\",\n\t\t\t\"state\": \"sp\",\n\t\t\t\"city\": \"Cotia\",\n\t\t\t\"neighborhood\": \"Rio Cotia\",\n\t\t\t\"street\": \"Rua Matrix\",\n\t\t\t\"street_number\": \"9999\",\n\t\t\t\"zipcode\": \"06714360\"\n\t\t}\n\t},\n\t\"dependents\": [\n\t\t{\n\t\t\t\"full_name\": \"Dependente elis\",\n\t\t\t\"email\": \"dependente1@gmail.com\",\n\t\t\t\"document\": \"11122233366\",\n\t\t\t\"mother_name\": \"mae do dependente 1\",\n\t\t\t\"gender\": \"Feminino\",\n\t\t\t\"birth_day\": \"2020-05-05\"\n\t\t},\n\t\t{\n\t\t\t\"full_name\": \"Dependente bb\",\n\t\t\t\"email\": \"dependente2@gmail.com\",\n\t\t\t\"document\": \"11122233366\",\n\t\t\t\"mother_name\": \"mae do dependente 2\",\n\t\t\t\"gender\": \"Masculino\",\n\t\t\t\"birth_day\": \"2020-05-05\"\n\t\t}\n\t]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4a4a532a0b404208b0bfdacfb474ba24"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1600831902155.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_acf66e3e50e8458f83adb0d9cfaee588",
+      "parentId": "fld_fa01dec6d1cf42039f3ebc3cd7325ae9",
+      "modified": 1603466489237,
+      "created": 1603466263134,
+      "url": "{{ local }}{{ apiPath  }}payment/cancel",
+      "name": "payment cancel",
+      "description": "Verifica se o usuário já validou o código(token) e se não cadastrou a senha e o nome.\nNo cadastro da senha e nome, retorna o Token(JWT) para continuar o processo de autenticação na API.",
+      "method": "POST",
+      "body": { "mimeType": "application/json", "text": "" },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4a4a532a0b404208b0bfdacfb474ba24"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1600831902152.625,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e12cda3aada8407684ac7f11a2f0d747",
+      "parentId": "fld_1e3ba7c293be4b45845617e88a21d01e",
+      "modified": 1603254316668,
+      "created": 1601508285558,
+      "url": "{{ local }}{{ apiPath  }}personal_data",
+      "name": "personal",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599445593065,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_1e3ba7c293be4b45845617e88a21d01e",
+      "parentId": "fld_59f0937a720d48658e05c55dde401b3a",
+      "modified": 1602043823106,
+      "created": 1601508285553,
+      "name": "Personal Data",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600359649093.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_130ab28906404277a45556d3e2f055bd",
+      "parentId": "fld_1e3ba7c293be4b45845617e88a21d01e",
+      "modified": 1603061301804,
+      "created": 1602034192521,
+      "url": "{{ online }}{{ apiPath  }}personal_data/2b690122-3ef0-4b19-ab48-3a120ffe68e2",
+      "name": "personal uuid",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599407714401.375,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_25e4cfeb1f7f45c8ba7d800598c863ab",
+      "parentId": "fld_1e3ba7c293be4b45845617e88a21d01e",
+      "modified": 1602331256887,
+      "created": 1601508285564,
+      "url": "{{ local }}{{ apiPath  }}personal_data",
+      "name": "personal create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"birth_day\": \"2020-05-05\",\n\t\"mother_name\": \"mae do titular\",\n\t\"gender\": \"M\",\n\t\"cellphone\": \"11985409693\",\n\t\"document\": \"11122233366\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599369835737.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_79a6bd4f16774b438cd798c780cb19a0",
+      "parentId": "fld_1e3ba7c293be4b45845617e88a21d01e",
+      "modified": 1602331283982,
+      "created": 1602045669918,
+      "url": "{{ local }}{{ apiPath  }}personal_data/update",
+      "name": "personal update",
+      "description": "Os campos profile,name,date_birth date ,mother_name,gender,weight,height,cellphone,national_registration. São os únicos campos aceitos para atualizar. No campo body somente passe os campos que serão atualizados.",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"birth_day\": \"2020-05-05\",\n\t\"mother_name\": \"mae do titularrrrr\",\n\t\"gender\": \"M\",\n\t\"cellphone\": \"11985409693\",\n\t\"document\": \"11122233366\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599369835637.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_4931bee96bf94704bed298f2c7b0288b",
+      "parentId": "fld_f07871e185394a3b854a02ec63421a49",
+      "modified": 1602125780568,
+      "created": 1602125731777,
+      "url": "{{ local }}{{ apiPath  }}personal_data",
+      "name": "dependent",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599445593065,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_f07871e185394a3b854a02ec63421a49",
+      "parentId": "fld_59f0937a720d48658e05c55dde401b3a",
+      "modified": 1602125731770,
+      "created": 1602125731770,
+      "name": "Dependent",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600359649081,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_9157f06b970f48fe881edf4c40725d8a",
+      "parentId": "fld_fe3ffb4f8ac146a7a6c304c1103f2ba7",
+      "modified": 1603391794698,
+      "created": 1601518732764,
+      "url": "{{ local }}{{ apiPath  }}scheduling",
+      "name": "scheduling",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"status\": 0\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_8dc325fea0814379b0c9f3463858c166"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599445593065,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_fe3ffb4f8ac146a7a6c304c1103f2ba7",
+      "parentId": "fld_59f0937a720d48658e05c55dde401b3a",
+      "modified": 1602043917317,
+      "created": 1601518732757,
+      "name": "Scheduling",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600359649068.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_d50c60bc354d43b0a05bef61c75ced7e",
+      "parentId": "fld_fe3ffb4f8ac146a7a6c304c1103f2ba7",
+      "modified": 1602960192742,
+      "created": 1601520738905,
+      "url": "{{ online }}{{ apiPath  }}scheduling/1fc32a20-8ec0-4276-b173-5ee562efa72a",
+      "name": "scheduling id",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599426653733.1875,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_8ef0a25fc2924688a9c09e7a80d5a231",
+      "parentId": "fld_fe3ffb4f8ac146a7a6c304c1103f2ba7",
+      "modified": 1603846420509,
+      "created": 1601518732768,
+      "url": "{{ local }}{{ apiPath  }}scheduling/scheduling_create",
+      "name": "scheduling create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"user_uuid_doctor\": \"a373f559-e5af-4240-a5e4-9230b0bbae7a\",\n\t\"scheduling_date\": \"2020-12-22 09:30:00\",\n\t\"cellphone\": \"11985409693\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599369835737.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_50faf1313e8248eaa9e515fa7b14004e",
+      "parentId": "fld_fe3ffb4f8ac146a7a6c304c1103f2ba7",
+      "modified": 1603929646134,
+      "created": 1603844759035,
+      "url": "{{ local }}{{ apiPath  }}scheduling/scheduling_verify",
+      "name": "scheduling verify",
+      "description": "",
+      "method": "POST",
+      "body": { "mimeType": "application/json", "text": "" },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599369835732.2812,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_05c08217ea284da392749d21b3f08fe0",
+      "parentId": "fld_fe3ffb4f8ac146a7a6c304c1103f2ba7",
+      "modified": 1603847313827,
+      "created": 1603598667595,
+      "url": "{{ local }}{{ apiPath  }}scheduling/scheduling_check_time",
+      "name": "scheduling check time",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"scheduling_date\": \"2020-10-20\",\n\t\"period\": null,\n\t\"next\": 54\n\t\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599369835726.8125,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_04087d6af5d34f668fdca74b7112199d",
+      "parentId": "fld_67cc8a0aef5342388f15cfa12a15054a",
+      "modified": 1603069385240,
+      "created": 1603067596782,
+      "url": "{{ local }}{{ apiPath }}users",
+      "name": "user",
+      "description": "",
+      "method": "GET",
+      "body": { "mimeType": "application/json", "text": "" },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_8dc325fea0814379b0c9f3463858c166"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599445593065,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_67cc8a0aef5342388f15cfa12a15054a",
+      "parentId": "fld_59f0937a720d48658e05c55dde401b3a",
+      "modified": 1603067596776,
+      "created": 1603067596776,
+      "name": "User",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600359649056,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_6e127a448b924b829610ad502f07787b",
+      "parentId": "fld_67cc8a0aef5342388f15cfa12a15054a",
+      "modified": 1603369506413,
+      "created": 1603067596796,
+      "url": "{{ local }}{{ apiPath  }}users/edit_user",
+      "name": "user edit doctor",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Michael\",\n\t\"email\": \"michaelito.regis@gmail.com\",\n\t\"celular\": \"11985409693\",\n\t\"img\": \"asdfasfd\",\n\t\"professional_document_type\": \"CRM\",\n\t\"professional_document_uf\": \"SP\",\n\t\"professional_document_number\": \"123456\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_d88a289a30534403983612f1ea67c595"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599426653733.1875,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_61d7706801e24fbf977042b181ffbf6d",
+      "parentId": "fld_67cc8a0aef5342388f15cfa12a15054a",
+      "modified": 1603369512297,
+      "created": 1603369512297,
+      "url": "{{ local }}{{ apiPath  }}users/edit_user",
+      "name": "user edit",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Michael\",\n\t\"email\": \"michaelito.regis@gmail.com\",\n\t\"celular\": \"11985409693\",\n\t\"img\": \"asdfasfd\",\n\t\"professional_document_type\": \"CRM\",\n\t\"professional_document_uf\": \"SP\",\n\t\"professional_document_number\": \"123456\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_d88a289a30534403983612f1ea67c595"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1599417184067.2812,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_6f02ae90273445f2a489c8bba4816554",
+      "parentId": "fld_5c787486c3e14649ac3d61e914ba1b5b",
+      "modified": 1602048386876,
+      "created": 1600354680992,
+      "url": "{{ local }}status",
+      "name": "status",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1600354680992,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_5c787486c3e14649ac3d61e914ba1b5b",
+      "parentId": "wrk_5df8fa6817f1433a82f8bc84cc717f0a",
+      "modified": 1600354862061,
+      "created": 1600354862061,
+      "name": "Tools",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600354862061,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_dba82ac334e24221bf027bba8f9a5d90",
+      "parentId": "fld_b42c63837a4b4c9a86f162fec58cdb2e",
+      "modified": 1603665805816,
+      "created": 1603373027668,
+      "url": "{{ local }}{{ apiPath }}users",
+      "name": "users",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ token }}",
+        "disabled": false
+      },
+      "metaSortKey": -1600831902187,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_b42c63837a4b4c9a86f162fec58cdb2e",
+      "parentId": "wrk_5df8fa6817f1433a82f8bc84cc717f0a",
+      "modified": 1603373027660,
+      "created": 1603373027660,
+      "name": "User",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1599684696479.25,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_a94921ee6da04878a3c8fd70466da5e2",
+      "parentId": "fld_b42c63837a4b4c9a86f162fec58cdb2e",
+      "modified": 1603373027675,
+      "created": 1603373027675,
+      "url": "{{ online }}{{ apiPath }}users/verify_email",
+      "name": "validation email",
+      "description": "Valida se o cliente já é cadastrado. Se não for, é enviado um código(token) por e-mail para validar em validation code.\nSe for cadastrado retorna o email e nome do cliente.",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"username\":\"guilhermeht.ramos@gmail.com\"\n}\t"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_5be759d7f6134382b630f06d26058532"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1600831902137,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_b5832f973bb443748f61f48146981e3b",
+      "parentId": "fld_b42c63837a4b4c9a86f162fec58cdb2e",
+      "modified": 1603748024818,
+      "created": 1603377237507,
+      "url": "{{ local }}{{ apiPath  }}users/edit_user",
+      "name": "user edit",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Michael gb\",\n\t\"email\": \"michaelito.regis@gmail.com\",\n\t\"img\": \"\",\n\t\"document\": \"34100353899\",\n\t\"mother_name\": \"mae testee\",\n\t\"cellphone\": \"11985409693\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cce90117bfa84ceb8aa22955f67e834a"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1600831902129.1875,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_785f9238a3754b09ac06018829b36669",
+      "parentId": "fld_b42c63837a4b4c9a86f162fec58cdb2e",
+      "modified": 1603373069095,
+      "created": 1603373027672,
+      "url": "{{ online }}{{ apiPath  }}users",
+      "name": "user create",
+      "description": "Verifica se o usuário já validou o código(token) e se não cadastrou a senha e o nome.\nNo cadastro da senha e nome, retorna o Token(JWT) para continuar o processo de autenticação na API.",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"username\": \"guilhermeht.ramos@gmail.com\",\n\t\"name\": \"Guilherme Ramos\",\n\t\"password\": \"Ramos123@\",\n\t\"document\": \"45230858893\",\n\t\"type\": 3\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4a4a532a0b404208b0bfdacfb474ba24"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1600831902124.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_7875566e83a54532bffbba36f525b269",
+      "parentId": "fld_b42c63837a4b4c9a86f162fec58cdb2e",
+      "modified": 1603373027679,
+      "created": 1603373027679,
+      "url": "{{ online }}{{ apiPath }}users/verify_code",
+      "name": "validation code",
+      "description": "Verifica se o código(token) enviado por e-mail é valido.",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"username\":\"julioams@hotmail.com\",\n\t\"code\": \"9846\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_5be759d7f6134382b630f06d26058532"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1600831902112,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_1e1fdacf00e546c987008ebde74d6f24",
+      "parentId": "fld_b42c63837a4b4c9a86f162fec58cdb2e",
+      "modified": 1603373074766,
+      "created": 1603373027682,
+      "url": "{{ online }}{{ apiPath  }}users/dcaeff00-68e5-4c98-8fcd-df26897ac358",
+      "name": "user delete",
+      "description": "Verifica se o usuário já validou o código(token) e se não cadastrou a senha e o nome.\nNo cadastro da senha e nome, retorna o Token(JWT) para continuar o processo de autenticação na API.",
+      "method": "DELETE",
+      "body": { "mimeType": "application/json", "text": "" },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4a4a532a0b404208b0bfdacfb474ba24"
+        }
+      ],
+      "authentication": { "type": "bearer", "token": "{{ token }}" },
+      "metaSortKey": -1600795779142.25,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_18e28788f1ec456fb5005f63debc9401",
+      "parentId": "fld_d419e1b0e64142958d544affa56d559d",
+      "modified": 1603736822509,
+      "created": 1602625155584,
+      "url": "{{ online }}{{ apiPath  }}users/dev_create_user",
+      "name": "dev create user",
+      "description": "Verifica se o usuário já validou o código(token) e se não cadastrou a senha e o nome.\nNo cadastro da senha e nome, retorna o Token(JWT) para continuar o processo de autenticação na API.",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"michaelito.regis@gmail.com\",\n\t\"name\": \"Michael\",\n\t\"password\": \"Mudar123\",\n\t\"document\": \"11122233366\",\n\t\"type\": 3\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4a4a532a0b404208b0bfdacfb474ba24"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1600831902162,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_d419e1b0e64142958d544affa56d559d",
+      "parentId": "wrk_5df8fa6817f1433a82f8bc84cc717f0a",
+      "modified": 1602626460528,
+      "created": 1602625155563,
+      "name": "Develop",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1599014717760.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_826fef1e0af3465cb07bce90b4ded708",
+      "parentId": "fld_d419e1b0e64142958d544affa56d559d",
+      "modified": 1603723545855,
+      "created": 1603147564753,
+      "url": "{{ local }}{{ apiPath  }}users/dev_create_user_doctor",
+      "name": "dev create user doctor",
+      "description": "Verifica se o usuário já validou o código(token) e se não cadastrou a senha e o nome.\nNo cadastro da senha e nome, retorna o Token(JWT) para continuar o processo de autenticação na API.",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"medico3@gmail.com\",\n\t\"name\": \"Medico 3\",\n\t\"password\": \"Mudar123\",\n\t\"document\": \"11122233366\",\n\t\"professional_document_type\": \"CRM\",\n\t\"professional_document_uf\": \"SP\",\n\t\"professional_document_number\": \"123456\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4a4a532a0b404208b0bfdacfb474ba24"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1600831902158.875,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_0b6b616c0f9c735066f458fa242701bcfa3d1111",
+      "parentId": "wrk_5df8fa6817f1433a82f8bc84cc717f0a",
+      "modified": 1600354651726,
+      "created": 1600354651726,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": null,
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1600354651726,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_0b6b616c0f9c735066f458fa242701bcfa3d1111",
+      "parentId": "wrk_5df8fa6817f1433a82f8bc84cc717f0a",
+      "modified": 1603925758678,
+      "created": 1600354651730,
+      "name": "Default Jar",
+      "cookies": [
+        {
+          "key": "__cfduid",
+          "value": "d7bded9121c4ff414dd3bda5bc50730201603925891",
+          "expires": "2020-11-27T22:58:11.000Z",
+          "domain": "pagar.me",
+          "path": "/",
+          "httpOnly": true,
+          "extensions": ["SameSite=Lax"],
+          "hostOnly": false,
+          "creation": "2020-09-28T14:25:28.372Z",
+          "lastAccessed": "2020-10-28T22:55:58.675Z",
+          "id": "44422801788928457"
+        },
+        {
+          "key": "AWSALBTG",
+          "value": "LZrnGHw59YS3EmczVT2xlPs1UABH12/0+EuRooZEjoIQdTUjP431BIVVZI0urL2ARwKfzElsPEaX4Doz4fx9aq/ltkpLxtj139lTTuHUNoOIn6KYqfe/CzUptrbOXH+CeCbHHTr5D92GNdhBAlO2Guf+OjPGUDgASxdmSzxcUAqR",
+          "expires": "2020-11-02T19:35:44.000Z",
+          "domain": "api.pagar.me",
+          "path": "/",
+          "hostOnly": true,
+          "creation": "2020-09-28T15:39:25.584Z",
+          "lastAccessed": "2020-10-26T19:35:44.314Z",
+          "id": "8985309152403649"
+        },
+        {
+          "key": "AWSALBTGCORS",
+          "value": "LZrnGHw59YS3EmczVT2xlPs1UABH12/0+EuRooZEjoIQdTUjP431BIVVZI0urL2ARwKfzElsPEaX4Doz4fx9aq/ltkpLxtj139lTTuHUNoOIn6KYqfe/CzUptrbOXH+CeCbHHTr5D92GNdhBAlO2Guf+OjPGUDgASxdmSzxcUAqR",
+          "expires": "2020-11-02T19:35:44.000Z",
+          "domain": "api.pagar.me",
+          "path": "/",
+          "extensions": ["SameSite=None"],
+          "hostOnly": true,
+          "creation": "2020-09-28T15:39:25.585Z",
+          "lastAccessed": "2020-10-26T19:35:44.314Z",
+          "id": "7930103972248832"
+        }
+      ],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_c6d763fb8ed446c1812695df34981be8",
+      "parentId": "wrk_5df8fa6817f1433a82f8bc84cc717f0a",
+      "modified": 1600354651461,
+      "created": 1600354651461,
+      "fileName": "STARBEM",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    },
+    {
+      "_id": "env_29dc29c8daa6455eb830fb882977b6a2",
+      "parentId": "env_0b6b616c0f9c735066f458fa242701bcfa3d1111",
+      "modified": 1602047930982,
+      "created": 1600354778168,
+      "name": "starbem",
+      "data": {
+        "local": "http://127.0.0.1:3000/",
+        "online": "https://api.starbem.app/",
+        "ip": "http://142.93.246.205:3000/",
+        "apiPath": "api/v1/",
+        "token": "{% response 'body', 'req_30d885995fe2443594568e2c71e9116a', 'b64::JC5kYXRhLnRva2Vu::46b', 'never', 60 %}"
+      },
+      "dataPropertyOrder": {
+        "&": ["local", "online", "ip", "apiPath", "token"]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1600354778168,
+      "_type": "environment"
+    }
+  ]
+}

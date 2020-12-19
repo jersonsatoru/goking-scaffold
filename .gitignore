@@ -1,0 +1,7 @@
+node_modules
+package-lock.json
+app/config/cors.json
+.env
+.env.production
+.env.development
+.env.testing
